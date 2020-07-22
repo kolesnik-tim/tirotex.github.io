@@ -1,3 +1,86 @@
 .footer
-  height: 100px
-  background: $black
+  background: #F9F9F9
+  &__nav
+    display: flex
+    justify-content: space-between
+    padding: 30px 0
+    +r(767)
+      flex-wrap: wrap
+  &__social
+    max-width: 380px
+    width: 100%
+    padding: 0 15px
+    +r(767)
+      order: 1 !important
+      max-width: 100%
+      padding: 0
+      padding-bottom: 20px
+      span:first-child
+        text-align: center
+    .social-icon
+      margin-bottom: 20px
+      +r(767)
+        justify-content: center
+  &__share
+    border-radius: 20px
+    border: 1px solid $black
+    background: #fff
+    overflow: hidden
+    display: flex
+    input
+      border: none
+      width: 100%
+      padding: 7px 15px
+    button
+      border-radius: 20px
+      background: $black
+      padding: 7px 39px 
+      letter-spacing: 0.02em
+      color: #fff
+      +tr
+      +r(767)
+        padding: 7px 31px
+      &:hover
+        background: $beige
+  &__schedule
+    li
+      margin-bottom: 30px
+      +r(767)
+        margin-bottom: 10px
+    .button
+      color: #fff
+      padding: 7px 9px
+      font-weight: normal
+      font-size: 9px
+      &:hover
+        color: #fff
+  ul
+    order: 2
+  li
+    font-size: 14px
+    line-height: 1.4
+    letter-spacing: 0.02em
+    color: $black
+    a, span
+      color: inherit
+      font-size: inherit
+      line-height: inherit
+      margin-bottom: 10px
+      display: block
+    a
+      display: block
+      &:hover
+        color: $beige
+  &__copyright
+    border-top: 1px solid $black
+    padding: 17px 0
+    +r(575)
+      width: calc(100% + 30px)
+      margin-left: -15px
+    p
+      color: $black
+      font-size: 14px
+      line-height: 14px
+      text-align: center
+      +r(767)
+        font-size: 12px

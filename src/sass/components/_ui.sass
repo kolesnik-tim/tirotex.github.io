@@ -1,34 +1,122 @@
 html
 body
-  // font-family: 'Open Sans', sans-serif
+  font-family: 'Montserrat', sans-serif
   box-sizing: border-box
   position: relative
+  font-size: 14px
+  color: $black
 .container
   box-sizing: border-box
   +rmin(1200)
-    max-width: 1165px !important
+    max-width: 1200px !important
 a
-  text-decoration: none
+  text-decoration: none !important
   transition: all 0.3s
 input[type="submit"]
   appearance: none
   -webkit-appearance: none
 textarea
   resize: none
+h1, h2
+  font-family: 'Balsamiq Sans'
+
+input
+  font-size: 14px
+  line-height: 1.4
+  color: $black
+  +placeholder-color($light-black)
+  background: #F9F9F9
+  border: 1px solid #CCCCCC
+  border-radius: 10px
+  padding: 10px 15px 9px
 
 
 +r(767)
 	.hidden-xs
 		display: none !important
-@media only screen and (min-width: 768px) and (max-width: 1024px)
+@media only screen and (min-width: 768px) and (max-width: 992px)
 	.hidden-sm
 		display: none !important
-+rmin(1024)
-	.hidden-md
+@media only screen and (min-width: 993px) and (max-width: 1200px)
+  .hidden-md
+    display: none !important
++rmin(1200)
+	.hidden-lg
 		display: none !important
 
 
+::-webkit-scrollbar-track
+  background-color: #F9F9F9
 
+::-webkit-scrollbar-thumb
+  border-radius: 6px
+  background-color: #D7B99E
+
+::-webkit-scrollbar
+  width: 10px
+
+
+.button
+  padding: 10px 15px
+  border-radius: 20px
+  font-size: 14px
+  color: #FFFFFF
+  text-transform: uppercase
+  text-align: center
+  &-primary
+    background: $beige
+    font-size: 12px
+    padding: 15px
+    font-weight: 500
+    &:hover
+      background: $black
+  &-secondary
+    background: $black
+    &:hover
+      background: $beige
+
+  &-transparent
+    text-transform: none
+    border: 2px solid $beige
+    color: $black
+    &:hover
+      background: $beige
+      color: #fff
+
+  &-transparent-black
+    border: 2px solid $black
+    color: $black
+    padding: 15px
+    &:hover
+      background: $black
+      color: #fff
+      
+    
+    
+
+
+
+
+
+.social-icon
+  display: flex
+  a
+    margin-right: 8px
+    width: 26px
+    height: 26px
+    background: $beige
+    border-radius: 50%
+    display: flex !important
+    +center
+    margin-bottom: 0
+    &:hover
+      background: $black
+      text-decoration: none !important
+    i
+      font-size: 13px
+      color: #fff
+      &.icon-viber
+        font-size: 15px
 
 
 

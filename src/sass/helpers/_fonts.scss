@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?5din1');
+  src:  url('../fonts/icomoon.eot?5din1#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?5din1') format('truetype'),
+    url('../fonts/icomoon.woff?5din1') format('woff'),
+    url('../fonts/icomoon.svg?5din1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.icon-arrow-down:before {
+  content: "\e900";
+}
+.icon-arrow-left:before {
+  content: "\e901";
+}
+.icon-arrow-right:before {
+  content: "\e902";
+}
+.icon-basket:before {
+  content: "\e903";
+}
+.icon-calendar:before {
+  content: "\e904";
+  color: #d7b99e;
+}
+.icon-check:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-close:before {
+  content: "\e906";
+}
+.icon-fb:before {
+  content: "\e907";
+  color: #fff;
+}
+.icon-heart-transparent:before {
+  content: "\e908";
+}
+.icon-heart:before {
+  content: "\e909";
+  color: #f62459;
+}
+.icon-inst:before {
+  content: "\e90a";
+}
+.icon-minus:before {
+  content: "\e90b";
+}
+.icon-play-button:before {
+  content: "\e90c";
+}
+.icon-play .path1:before {
+  content: "\e90d";
+  color: rgb(215, 185, 158);
+}
+.icon-play .path2:before {
+  content: "\e90e";
+  margin-left: -1.009765625em;
+  color: rgb(255, 255, 255);
+}
+.icon-plus:before {
+  content: "\e90f";
+}
+.icon-question:before {
+  content: "\e910";
+  color: #999;
+}
+.icon-search:before {
+  content: "\e911";
+  color: #fff;
+}
+.icon-star-transparent:before {
+  content: "\e912";
+  color: #d7b99e;
+}
+.icon-star:before {
+  content: "\e913";
+  color: #d7b99e;
+}
+.icon-telegram:before {
+  content: "\e914";
+  color: #fff;
+}
+.icon-viber .path1:before {
+  content: "\e915";
+  position: relative;
+  top: 8px;
+}
+.icon-viber .path2:before {
+  content: "\e916";
+  color: #D7B99E;
+  position: relative;
+  top: -7px;
+  transition: all 0.3s;
+
+}
+a:hover .icon-viber .path2:before{
+  color: #0F0C0A;
+}
