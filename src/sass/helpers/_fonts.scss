@@ -26,7 +26,9 @@
 }
 
 
-
+.icon-burger:before {
+  content: "\e917";
+}
 .icon-arrow-down:before {
   content: "\e900";
 }
@@ -70,9 +72,13 @@
 .icon-play-button:before {
   content: "\e90c";
 }
+.icon-play{
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
 .icon-play .path1:before {
   content: "\e90d";
-  color: rgb(215, 185, 158);
 }
 .icon-play .path2:before {
   content: "\e90e";
@@ -104,16 +110,17 @@
 }
 .icon-viber .path1:before {
   content: "\e915";
-  position: relative;
-  top: 8px;
 }
 .icon-viber .path2:before {
   content: "\e916";
   color: #D7B99E;
-  position: relative;
-  top: -7px;
+  margin-left: -0.9375em;
   transition: all 0.3s;
-
+}
+.icon-viber{
+  display: flex;
+  align-self: center;
+  justify-self: center;
 }
 a:hover .icon-viber .path2:before{
   color: #0F0C0A;

@@ -13,3 +13,11 @@
 //   });
 //   return false;
 // });
+
+
+
+//plus minus home
+$('.home-about__dropdown h4').on('click', function() {
+  $(this).toggleClass('active');
+  $(this).next().slideToggle();
+});
