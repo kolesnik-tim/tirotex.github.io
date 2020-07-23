@@ -1,0 +1,78 @@
+.home-intro
+  h2
+    font-size: 27px
+    color: $black
+    line-height: 1.3
+    text-align: center
+    padding: 30px 0px 20px
+    border-bottom: 1px solid #CCCCCC
+    +r(767)
+      font-size: 18px
+      padding: 30px 45px 10px
+    +r(374)
+      padding: 30px 25px 10px
+  &__row
+    +r(992)
+      display: flex
+  &__img
+    overflow: hidden
+    position: relative
+    &-primary
+      height: 100%
+      +r(992)
+        height: 365px
+        margin-bottom: 15px
+        a
+          top: 30px !important
+          padding: 12px 36px 10px !important
+    &-secondary
+      height: 300px
+      margin-bottom: 20px
+      +r(992)
+        margin-bottom: 0
+        height: 157px
+        a
+          top: 20px !important
+      &:last-child
+        margin-bottom: 0
+        +r(992)
+          margin-left: 10px
+    img
+      +object-fit(cover)
+      width: 100%
+      height: 100%
+    a
+      position: absolute
+      top: 0
+      left: 40px
+      background: $black
+      padding: 25px
+      border-radius: 0px 0px 10px 10px
+      +r(992)
+        left: 0
+        border-radius: 0px 10px 10px 0px
+        padding: 12px 20px 10px
+      +r(374)
+        padding: 12px 15px 10px
+      &:hover
+        background: $beige
+      span
+        width: 16px
+        color: #fff
+        display: block
+        word-wrap: break-word
+        font-size: 14px
+        text-transform: uppercase
+        line-height: 1.22
+        text-align: center
+        font-family: 'Balsamiq Sans'
+        +r(992)
+          width: auto
+          font-size: 12px
+          word-wrap: normal
+          line-height: 1
+          letter-spacing: 0.055em
+      div
+        height: 15px
+        +r(992)
+          display: none

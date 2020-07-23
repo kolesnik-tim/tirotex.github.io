@@ -54,6 +54,8 @@ input
 
 ::-webkit-scrollbar
   width: 10px
+  +r(992)
+    width: 4px
 
 
 .button
@@ -63,17 +65,21 @@ input
   color: #FFFFFF
   text-transform: uppercase
   text-align: center
+  display: inline-block
+  line-height: 1
   &-primary
     background: $beige
     font-size: 12px
-    padding: 15px
+    padding: 14px
     font-weight: 500
     &:hover
       background: $black
+      color: #fff
   &-secondary
     background: $black
     &:hover
       background: $beige
+      color: #fff
 
   &-transparent
     text-transform: none
@@ -93,6 +99,15 @@ input
       
     
     
+
+
+
+
+
+.star
+  display: flex
+  font-size: 13px
+
 
 
 
