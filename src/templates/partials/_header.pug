@@ -1,3 +1,408 @@
 //BEGIN header
 header.header
+  .header__toolbar
+    .container
+      .header__toolbar__nav
+        ul
+          li
+            a(href="#") Доставка и оплата
+          li
+            a(href="#") Контакты
+          li
+            a(href="#") Новости
+          li
+            a(href="#") Блог
+          li
+            a(href="#") О нас
+        ul
+          li
+            a(href="#") Вход
+          li
+            a(href="#") Регистрация
+  .header__body
+    .container
+      .header__body__row
+        .header__body__phone
+          .menu-open
+            span
+          ul
+            li
+              a(href="tel:+380935222973") +38 (093) 52-22-973
+            li 
+              a(href="tel:+380964822442") +38 (096) 48-22-442
+          a(href="#").button.button-primary Обратный звонок
+        .header__body__logo
+          img(src="img/logo.png", alt="")
+        .header__body__btn
+          a(href="#").header__body__btn__liked
+            i.icon-heart-transparent
+            span 3
+          .header__basket
+            a(href="#").open-basket
+              i.icon-basket
+              span 12
+          .header__basket__dropdown.basket
+            .basket__header
+              h3 Корзина
+              a(href="#").basket__close
+                i.icon-close
+            .basket__body
+              .basket__item
+                .basket__item__img
+                  img(src="img/home/intro-img-1.jpg", alt="")
+                .basket__item__info
+                  h2 Постельный комплект Butterfly (Батерфлай) если длинное название 
+                  strong 460 грн
+                  b Размер: 1.5м*2.0м
+                  b Цвет: небесно-голубой
+                  .basket__item__counter
+                    button
+                      i.icon-minus
+                    input(type="number" value="1" readonly)
+                    button
+                      i.icon-plus
+              .basket__item
+                .basket__item__img
+                  img(src="img/home/intro-img-1.jpg", alt="")
+                .basket__item__info
+                  h2 Постельный комплект Butterfly (Батерфлай) если длинное название 
+                  strong 460 грн
+                  b Размер: 1.5м*2.0м
+                  b Цвет: небесно-голубой
+                  .basket__item__counter
+                    button
+                      i.icon-minus
+                    input(type="number" value="1" readonly)
+                    button
+                      i.icon-plus
+              .basket__item
+                .basket__item__img
+                  img(src="img/home/intro-img-1.jpg", alt="")
+                .basket__item__info
+                  h2 Постельный комплект Butterfly (Батерфлай) если длинное название 
+                  strong 460 грн
+                  b Размер: 1.5м*2.0м
+                  b Цвет: небесно-голубой
+                  .basket__item__counter
+                    button
+                      i.icon-minus
+                    input(type="number" value="1" readonly)
+                    button
+                      i.icon-plus
+            .basket__footer
+              .basket__footer__sum
+                ul
+                  li Скидка:
+                  li -40грн
+                ul
+                  li Итого:
+                  li 460 грн
+              .basket__footer__btn
+                a(href="#").basket__close Продолжить покупки
+                a(href="#").button.button-secondary оформить заказ
+  .header__footer
+    .container
+      .header__footer__content
+        nav
+          ul.header__footer__list
+            li
+              a(href="#") Постельное белье
+                i.icon-arrow-down
+              ul
+                li
+                  a(href="#") 1.5 спальные комплекты
+                li
+                  a(href="#") 2-х спальные комплекты
+                li
+                  a(href="#") 2-х спальные МАКСИ
+                li
+                  a(href="#") Евро комплекты
+                li
+                  a(href="#") Евро макси
+                li
+                  a(href="#") Семейные комплекты
+                li
+                  a(href="#") Постель для гостинниц
+                li
+                  a(href="#") Новинки
+                li
+                  a(href="#") Топ продаж
+            li
+              a(href="#") Постель жатка
+                i.icon-arrow-down
+              ul
+                li
+                  a(href="#") 1.5 спальные комплекты
+                li
+                  a(href="#") 2-х спальные комплекты
+                li
+                  a(href="#") 2-х спальные МАКСИ
+                li
+                  a(href="#") Евро комплекты
+                li
+                  a(href="#") Евро макси
+                li
+                  a(href="#") Семейные комплекты
+                li
+                  a(href="#") Постель для гостинниц
+                li
+                  a(href="#") Новинки
+                li
+                  a(href="#") Топ продаж
+            li
+              a(href="#") Детское постельное
+                i.icon-arrow-down
+              ul
+                li
+                  a(href="#") 1.5 спальные комплекты
+                li
+                  a(href="#") 2-х спальные комплекты
+                li
+                  a(href="#") 2-х спальные МАКСИ
+                li
+                  a(href="#") Евро комплекты
+                li
+                  a(href="#") Евро макси
+                li
+                  a(href="#") Семейные комплекты
+                li
+                  a(href="#") Постель для гостинниц
+                li
+                  a(href="#") Новинки
+                li
+                  a(href="#") Топ продаж
+            li
+              a(href="#") Полотенца
+                i.icon-arrow-down
+              ul
+                li
+                  a(href="#") 1.5 спальные комплекты
+                li
+                  a(href="#") 2-х спальные комплекты
+                li
+                  a(href="#") 2-х спальные МАКСИ
+                li
+                  a(href="#") Евро комплекты
+                li
+                  a(href="#") Евро макси
+                li
+                  a(href="#") Семейные комплекты
+                li
+                  a(href="#") Постель для гостинниц
+                li
+                  a(href="#") Новинки
+                li
+                  a(href="#") Топ продаж
+        .header__search
+          .header__search__input
+            input(type="text" placeholder="Более 5 000 товаров")
+            button.button.button-primary
+              i.icon-search
+          .header__search__dropdown
+            ul
+              li
+                a(href="#")
+                  .search__dropdown__img
+                    img(src="img/home/intro-img-1.jpg", alt="")
+                  .search__dropdown__info
+                    p Постельный комплект Butterfly (Батерфлай) если длинное название 
+                    span Есть в наличии
+              li
+                a(href="#")
+                  .search__dropdown__img
+                    img(src="img/home/intro-img-1.jpg", alt="")
+                  .search__dropdown__info
+                    p Постельный комплект Butterfly (Батерфлай) если длинное название 
+                    span Есть в наличии
+              li
+                a(href="#")
+                  .search__dropdown__img
+                    img(src="img/home/intro-img-1.jpg", alt="")
+                  .search__dropdown__info
+                    p Постельный комплект Butterfly (Батерфлай) если длинное название 
+                    span Есть в наличии
+              li
+                a(href="#")
+                  .search__dropdown__img
+                    img(src="img/home/intro-img-1.jpg", alt="")
+                  .search__dropdown__info
+                    p Постельный комплект Butterfly (Батерфлай) если длинное название 
+                    span Есть в наличии
+              li
+                a(href="#")
+                  .search__dropdown__img
+                    img(src="img/home/intro-img-1.jpg", alt="")
+                  .search__dropdown__info
+                    p Постельный комплект Butterfly (Батерфлай) если длинное название 
+                    span Есть в наличии
+              li
+                a(href="#")
+                  .search__dropdown__img
+                    img(src="img/home/intro-img-1.jpg", alt="")
+                  .search__dropdown__info
+                    p Постельный комплект Butterfly (Батерфлай) если длинное название 
+                    span Есть в наличии
+              li
+                a(href="#")
+                  .search__dropdown__img
+                    img(src="img/home/intro-img-1.jpg", alt="")
+                  .search__dropdown__info
+                    p Постельный комплект Butterfly (Батерфлай) если длинное название 
+                    span Есть в наличии
+              li
+                a(href="#")
+                  .search__dropdown__img
+                    img(src="img/home/intro-img-1.jpg", alt="")
+                  .search__dropdown__info
+                    p Постельный комплект Butterfly (Батерфлай) если длинное название 
+                    span Есть в наличии
+              li
+                a(href="#")
+                  .search__dropdown__img
+                    img(src="img/home/intro-img-1.jpg", alt="")
+                  .search__dropdown__info
+                    p Постельный комплект Butterfly (Батерфлай) если длинное название 
+                    span Есть в наличии
+              li
+                a(href="#")
+                  .search__dropdown__img
+                    img(src="img/home/intro-img-1.jpg", alt="")
+                  .search__dropdown__info
+                    p Постельный комплект Butterfly (Батерфлай) если длинное название 
+                    span Есть в наличии
+              li
+                a(href="#")
+                  .search__dropdown__img
+                    img(src="img/home/intro-img-1.jpg", alt="")
+                  .search__dropdown__info
+                    p Постельный комплект Butterfly (Батерфлай) если длинное название 
+                    span Есть в наличии
+            .header__search__footer
+              a(href="#") Все результаты
+
+
+
+
+
+
+
+
+
+
+
+.mobile-menu-bg
+.mobile-menu
+  .menu-close
+    i.icon-close
+  .mobile-menu__content
+    .mobile-menu__logo
+      img(src="img/logo-mob.png", alt="")
+    .mobile-menu__user
+      a(href="#") Вход
+      a(href="#") Регистрация
+    ul.mobile-menu__nav
+      li
+        span Постельное белье
+          i.icon-arrow-down
+        ul
+          li
+            a(href="#") 1.5 спальные комплекты
+          li
+            a(href="#") 2-х спальные комплекты
+          li
+            a(href="#") 2-х спальные МАКСИ
+          li
+            a(href="#") Евро комплекты
+          li
+            a(href="#") Евро макси
+          li
+            a(href="#") Семейные комплекты
+          li
+            a(href="#") Постель для гостинниц
+          li
+            a(href="#") Новинки
+          li
+            a(href="#") Топ продаж
+      li
+        span Постель жатка
+          i.icon-arrow-down
+        ul
+          li
+            a(href="#") 1.5 спальные комплекты
+          li
+            a(href="#") 2-х спальные комплекты
+          li
+            a(href="#") 2-х спальные МАКСИ
+          li
+            a(href="#") Евро комплекты
+          li
+            a(href="#") Евро макси
+          li
+            a(href="#") Семейные комплекты
+          li
+            a(href="#") Постель для гостинниц
+          li
+            a(href="#") Новинки
+          li
+            a(href="#") Топ продаж
+      li
+        span Детское постельное
+          i.icon-arrow-down
+        ul
+          li
+            a(href="#") 1.5 спальные комплекты
+          li
+            a(href="#") 2-х спальные комплекты
+          li
+            a(href="#") 2-х спальные МАКСИ
+          li
+            a(href="#") Евро комплекты
+          li
+            a(href="#") Евро макси
+          li
+            a(href="#") Семейные комплекты
+          li
+            a(href="#") Постель для гостинниц
+          li
+            a(href="#") Новинки
+          li
+            a(href="#") Топ продаж
+      li
+          span Полотенца
+            i.icon-arrow-down
+          ul
+            li
+              a(href="#") 1.5 спальные комплекты
+            li
+              a(href="#") 2-х спальные комплекты
+            li
+              a(href="#") 2-х спальные МАКСИ
+            li
+              a(href="#") Евро комплекты
+            li
+              a(href="#") Евро макси
+            li
+              a(href="#") Семейные комплекты
+            li
+              a(href="#") Постель для гостинниц
+            li
+              a(href="#") Новинки
+            li
+              a(href="#") Топ продаж
+    ul.mobile-menu__toolbar
+      li
+        a(href="#") Главная
+      li
+        a(href="#") Доставка и оплата
+      li
+        a(href="#") Контакты
+      li
+        a(href="#") Новости
+      li
+        a(href="#") Блог
+      li
+        a(href="#") О нас
+
+
+
 //END header

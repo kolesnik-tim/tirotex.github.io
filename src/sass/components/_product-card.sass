@@ -68,6 +68,7 @@
       label
         width: 27px
         height: 27px
+        cursor: pointer
         +r(767)
           width: 18px
           height: 18px
@@ -127,6 +128,8 @@
       +r(767)
         font-size: 14px
         margin-bottom: 10px
+      +r(374)
+        font-size: 12px
       &.discount
         color: $red
       s
@@ -135,9 +138,12 @@
         margin-right: 25px
         +r(767)
           margin-right: 6px
+        +r(374)
+          font-size: 10px
     .button
       width: 100%
       font-size: 12px
+      box-sizing: border-box
       +r(767)
         padding: 11px
 
@@ -146,6 +152,8 @@
   &--review
     +r(767)
       padding: 15px
+      h4
+        display: none
     .product-card__img
       +r(767)
         height: 180px
@@ -153,5 +161,4 @@
       div
         padding: 10px 0
       .button
-        padding: 13px
         border-width: 1px

@@ -1,33 +1,643 @@
 .header
-  height: 100px
-  background: #a7a7a7
-  // .menu-open
-  //   position: absolute
-  //   left: 20px
-  //   top: 65px
-  //   width: 30px
-  //   height: 30px
-  //   display: none
-  //   z-index: 99
-  //   +r(1100)
-  //     display: block
-  //   +r(767)
-  //     top: 55%
-  //     transform: translate(0, -50%)
-  //   span
-  //     width: 30px
-  //     height: 2px
-  //     margin-top: 10px
-  //     background: $white
-  //     display: block
-  //     &:before, &:after
-  //       content: ''
-  //       width: 30px
-  //       height: 2px
-  //       background: $white
-  //       position: absolute
-  //       left: 0
-  //     &:before
-  //       top: 0
-  //     &:after
-  //       bottom: 8px
+  +r(992)
+    padding-top: 80px
+  +r(767)
+    padding-top: 60px
+  .menu-open
+    position: relative
+    width: 38px
+    height: 40px
+    display: none
+    z-index: 99
+    margin-top: -3px
+    +r(992)
+      display: block
+    span
+      width: 38px
+      height: 4px
+      background: $black
+      display: block
+      border-radius: 3px
+      position: relative
+      top: 20px
+      &:before, &:after
+        content: ''
+        width: 38px
+        height: 4px
+        background: $black
+        position: absolute
+        left: 0
+        border-radius: 3px
+      &:before
+        top: 8px
+      &:after
+        bottom: 8px
+
+
+  &__toolbar
+    background: $black
+    +r(992)
+      display: none
+    &__nav
+      display: flex
+      justify-content: space-between
+    ul
+      display: flex
+      &:last-child
+        a
+          margin-right: 0
+          margin-left: 30px
+    a
+      +Montserrat-reg-14()
+      color: #fff
+      margin-right: 65px
+      padding: 6px 0
+      display: block
+      +r(992)
+        margin-right: 25px
+      &:hover
+        color: $beige
+
+
+  &__body
+    background: #fff
+    padding: 8px 0
+    +tr
+    +r(992)
+      position: fixed
+      top: 0
+      width: 100%
+      left: 0
+      background: #fff
+      z-index: 10
+      &.active
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15)
+    &__row
+      display: flex
+      align-items: center
+      position: relative
+    &__phone
+      width: 100%
+      ul
+        display: flex
+        align-items: center
+        +r(992)
+          display: none
+      li a
+        font-size: 12px
+        font-weight: normal
+        color: $black
+        margin-right: 20px
+        &:hover
+          color: $beige
+      .button
+        padding: 8px 9px
+        font-size: 9px
+        font-weight: normal
+        margin-top: 8px
+        +r(992)
+          display: none
+    &__logo
+      height: 62px
+      width: 100%
+      +center
+      +r(767)
+        height: 42px
+        width: 150px
+      img
+        height: 100%
+    &__btn
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      width: 100%
+      &__liked
+        margin-right: 45px
+        position: relative
+        +r(767)
+          margin-right: 30px
+        &:hover
+          i
+            color: $beige
+        i
+          font-size: 24px
+          color: $black
+          +tr
+        span
+          position: absolute
+          right: -6px
+          top: -4px
+          font-size: 10px
+          font-weight: normal
+          color: #ffffff
+          +center
+          width: 14px
+          height: 14px
+          background-color: $red
+          border-radius: 50%
+  &__basket
+    position: relative
+    .open-basket
+      &:hover
+        i
+          color: $beige
+      .icon-basket
+        font-size: 27px
+        color: $black
+        +tr
+    span
+      position: absolute
+      right: -6px
+      top: -4px
+      font-size: 10px
+      font-weight: normal
+      color: #ffffff
+      +center
+      width: 14px
+      height: 14px
+      background-color: $red
+      border-radius: 50%
+
+  &__footer
+    &__content
+      display: flex
+      justify-content: space-between
+      padding: 10px 0
+      align-items: center
+      border-bottom: 1px solid $light-gray
+      border-top: 1px solid $light-gray 
+      +r(992)
+        border: none
+    &__list
+      display: flex
+      +r(992)
+        display: none
+      li
+        padding-right: 60px
+        position: relative
+        +r(1200)
+          padding-right: 20px
+        &:last-child
+          padding-right: 0
+        a
+          color: $black
+          +Balsamiq-Sans-14()
+          font-weight: normal
+          text-transform: uppercase
+          +r(1200)
+            font-size: 12px
+          &:hover
+            color: $beige
+          i
+            font-size: 8px
+            margin-left: 5px
+        ul
+          width: 230px
+          border-radius: 10px
+          background-color: rgba(15, 12, 10, 0.9)
+          position: absolute
+          top: 30px
+          left: 0
+          z-index: 8
+          padding: 10px 0
+          display: none
+          li
+            padding-right: 0
+          a
+            padding: 8px 20px
+            color: #fff
+            display: block
+            margin-bottom: 9px
+            font-size: 14px
+            font-weight: 500
+            line-height: 1.4
+            letter-spacing: 0.28px
+            color: #ffffff
+            text-transform: none
+            font-family: 'Montserrat'
+            &:hover
+              background: #fff
+              color: $black
+  &__search
+    position: relative
+    width: 345px
+    +r(1200)
+      width: 310px
+    +r(992)
+      width: 100%
+    &__input
+      border-radius: 20px
+      border: solid 1px $light-gray
+      background-color: #ffffff
+      height: 32px
+      width: 100%
+      +center
+      position: relative
+      z-index: 6
+      input
+        border-radius: 0
+        border: none
+        background: none
+        width: 100%
+        padding: 8px 14px
+        flex: 1
+        +placeholder-color($grey)
+        +Montserrat-12()
+      button
+        padding: 0
+        height: 100%
+        width: 32px
+        +center
+        +tr
+        i
+          font-size: 15px
+          color: #fff
+    &__dropdown
+      position: absolute
+      top: 15px
+      left: 0
+      width: 100%
+      border: solid 1px $light-gray
+      background-color: #ffffff
+      z-index: 5
+      padding: 28px 15px 0
+      border-radius: 0 0 10px 10px
+      display: none
+      ul
+        max-height: 445px
+        overflow-y: auto
+        width: calc(100% + 15px)
+        padding-right: 15px
+        +r(767)
+          max-height: 50vh
+        &::-webkit-scrollbar
+          width: 4px
+      li
+        border-bottom: 1px solid $light-gray
+        padding-right: 0
+        a
+          display: flex
+          padding: 15px 0
+          text-transform: none
+        &:first-child
+          a
+            padding-top: 0
+        &:last-child
+          border-bottom: none
+        .search__dropdown__img
+          width: 73px
+          height: 73px
+          overflow: hidden
+          margin-right: 30px
+          img
+            width: 100%
+            height: 100%
+            +object-fit(cover)
+        .search__dropdown__info
+          flex: 1
+          p
+            color: #333333
+            +Montserrat-12()
+            margin-bottom: 5px
+          span
+            font-size: 14px
+            font-weight: normal
+            line-height: 1.3
+            color: $gren
+    &__footer
+      border-radius: 10px
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15)
+      background-color: #ffffff
+      padding: 12px 33px
+      text-align: right
+      width: calc(100% + 30px)
+      margin-left: -15px
+      a
+        color: #000000
+        +Montserrat-12()
+        border-bottom: 1px solid #000
+        &:hover
+          color: $beige
+          border-color: $beige
+
+    
+    
+    
+.basket
+  max-width: 690px
+  width: 100%
+  border: solid 1px #cccccc
+  background-color: #ffffff 
+  padding: 50px 50px 30px
+  position: absolute
+  top: 60px
+  right: 0
+  z-index: 7
+  display: none
+  border-radius: 10px
+  +r(767)
+    padding: 25px 15px 40px
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15)
+    border: none
+    top: 40px
+    right: -15px
+    border-radius: 0 0 10px 10px
+    width: calc(100% + 30px)
+  &::before, &:after
+    content: ''
+    position: absolute
+    top: -23px
+    right: 13px
+    border: 8px solid transparent
+  &:before
+    border-bottom: 15px solid #cccccc
+    +r(767)
+      border: 5px solid transparent
+      border-bottom: 5px solid #fff
+      top: -10px
+      right: 23px
+  &::after
+    border-bottom: 15px solid #fff
+    top: -20px
+    +r(767)
+      display: none
+
+  &__header
+    h3
+      +Montserrat-24()
+      color: #333333
+      text-align: center
+      text-transform: uppercase
+      font-weight: normal
+      padding-bottom: 20px
+      border-bottom: 1px solid $light-gray
+      +r(767)
+        font-size: 18px
+        font-weight: 500
+    .basket__close
+      position: absolute
+      top: 30px
+      right: 30px
+      display: block
+      +r(767)
+        top: 25px
+        right: 15px
+      &:hover
+        i
+          color: $beige
+      i
+        font-size: 20px
+        color: $black
+        +tr
+        +r(767)
+          font-size: 16px
+  &__body
+    max-height: 320px
+    overflow-y: auto
+    padding-right: 27px
+    width: calc(100% + 30px)
+    +r(767)
+      max-height: 210px
+      width: calc(100% + 10px)
+      padding-right: 8px
+    &::-webkit-scrollbar
+      width: 4px
+  &__item
+    display: flex
+    align-items: flex-start
+    padding: 20px 0
+    border-bottom: 1px solid $light-gray
+    &:last-child
+      border-bottom: none
+    &__img
+      width: 140px
+      height: 140px
+      overflow: hidden
+      margin-right: 30px
+      +r(767)
+        width: 100px
+        height: 100%
+        margin-right: 10px
+      img
+        width: 100%
+        height: 100%
+        +object-fit(cover)
+    &__info
+      flex: 1
+      h2
+        color: $black
+        font-family: 'Montserrat'
+        +Montserrat-18()
+        margin-bottom: 15px
+        font-weight: normal
+        +r(767)
+          font-size: 14px
+          margin-bottom: 10px
+          text-transform: uppercase
+      strong
+        color: $black
+        +Montserrat-18()
+        font-weight: normal
+        display: block
+        margin-bottom: 15px
+        +r(767)
+          margin-bottom: 10px
+      b
+        font-size: 14px
+        font-weight: normal
+        color: $grey
+        margin-bottom: 5px
+        display: block
+        +r(767)
+          font-size: 12px
+          letter-spacing: 0.24px
+          line-height: 1.4
+    &__counter
+      margin-top: 20px
+      width: 123px
+      height: 30px
+      border-radius: 8px
+      border: solid 1px #cccccc
+      background-color: #f6f6f6
+      display: flex
+      overflow: hidden
+      +r(767)
+        margin-top: 15px
+      button, input
+        width: 42px
+        height: 100%
+      button
+        +center
+        background: none
+        font-size: 15px
+        line-height: 1
+        outline: none
+        i.icon-minus
+          font-size: 1.5px
+      input
+        border: none
+        border-left: solid 1px #cccccc
+        border-right: solid 1px #cccccc
+        border-radius: 0
+        padding: 0 5px
+        text-align: center
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+          -webkit-appearance: none
+          margin: 0
+  &__footer
+    &__sum
+      padding: 15px 0
+      border-top: 1px solid $light-gray
+      border-bottom: 1px solid $light-gray
+      ul
+        display: flex
+        justify-content: space-between
+        &:first-child
+          margin-bottom: 10px
+          li
+            color: #1bbc82
+            +Montserrat-reg-14()
+            text-transform: uppercase
+        &:last-child
+          li
+            color: #333333
+            +Montserrat-18()
+            text-transform: uppercase
+    &__btn
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-top: 30px
+      +r(767)
+        flex-direction: column-reverse
+        align-items: flex-end
+        padding-top: 20px
+      .basket__close
+        color: #000000
+        +Montserrat-12()
+        border-bottom: 1px solid #000
+        &:hover
+          color: $beige
+          border-color: $beige
+      .button
+        padding: 15px 42px
+        line-height: 1.7
+        border-radius: 30px
+        letter-spacing: 1px
+        +r(767)
+          width: 100%
+          padding: 8px 40px
+          margin-bottom: 20px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mobile-menu-bg
+  -webkit-backdrop-filter: blur(10px)
+  backdrop-filter: blur(10px)
+  background-color: rgba(33, 33, 33, 0.26)
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 30
+  display: none
+.mobile-menu
+  -webkit-backdrop-filter: blur(16px)
+  backdrop-filter: blur(16px)
+  background-color: rgba(15, 12, 10, 0.85)
+  z-index: 31
+  position: fixed
+  top: 0
+  left: -400px
+  width: 320px
+  height: 100%
+  transition: all 0.6s
+  &.active
+    left: 0
+  &__content
+    height: 100%
+    overflow-x: hidden
+    overflow-y: auto
+  .menu-close
+    position: absolute
+    right: -42px
+    top: 50px
+    display: none
+    +r(374)
+      right: 20px
+    i
+      font-size: 30px
+      color: #000
+      +r(374)
+        color: #fff
+  &__logo
+    height: 130px
+    padding: 35px 15px
+    img
+      height: 100%
+  &__user
+    padding: 0 15px 35px
+    a
+      font-size: 16px
+      font-weight: normal
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.4
+      letter-spacing: 0.32px
+      color: #ffffff
+      &:first-child::after
+        content: '|'
+        margin: 0 5px
+  &__nav
+    padding: 0 15px 10px
+    border-bottom: 1px solid #cccccc
+    span
+      font-size: 18px
+      font-weight: 600
+      line-height: 1.3
+      letter-spacing: 0.81px
+      color: #ffffff
+      +center-y
+      margin-bottom: 25px
+      padding-top: 5px
+      text-transform: uppercase
+      i
+        font-size: 8px
+        color: #fff
+        margin-left: 5px
+    ul
+      padding-left: 15px
+      display: none
+      a
+        font-size: 16px
+        font-weight: 500
+        line-height: 1.4
+        letter-spacing: 0.32px
+        color: #ffffff
+        margin-bottom: 20px
+        display: block
+
+
+  &__toolbar
+    padding: 30px 15px 0
+    a
+      font-size: 14px
+      font-weight: 500
+      line-height: 1.3
+      letter-spacing: 0.7px
+      color: #ffffff
+      margin-bottom: 40px
+      display: block
+      text-transform: uppercase

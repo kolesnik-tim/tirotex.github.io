@@ -1,16 +1,65 @@
 .home-product
-  padding: 50px 0 0
-  +r(767)
-    padding: 40px 0 0
   h2
     font-size: 21px
     line-height: 1
     text-transform: uppercase
-    margin-bottom: 30px
     color: $black
+    margin-top: 50px
     +r(767)
       font-size: 18px
-      margin-bottom: 20px
+      margin-top: 40px
+  .slider
+    position: relative
+    .swiper-container
+      padding: 30px 10px 10px
+      width: calc(100% + 20px)
+      margin-left: -10px
+      +r(767)
+        width: 100%
+        margin-left: 0
+        width: calc(100% + 30px)
+        margin-left: -15px
+        padding: 25px 15px 10px
+    .swiper-button-next, .swiper-button-prev
+      width: 40px
+      height: 40px
+      border-radius: 10px
+      background: none
+      +center
+      +tr
+      +r(1300)
+        width: 30px
+        height: 30px
+      +r(575)
+        display: none
+      i
+        font-size: 20px
+        color: $beige
+        +tr
+        +r(1300)
+          font-size: 17px
+      &:hover
+        background: $beige
+        i
+          color: #fff
+    .swiper-button-next
+      right: -50px
+      +r(1300)
+        right: -10px
+    .swiper-button-prev
+      left: -50px
+      +r(1300)
+        left: -10px
+  &--review
+    .slider
+      position: relative
+      .swiper-container
+        +r(575)
+          width: 100%
+          margin-left: 0
+          width: calc(100% + 30px)
+          margin-left: -15px
+          padding: 25px 135px 10px 10px
   &__connection
     border: 3px solid #F4F3F5
     margin: 70px 0 20px
@@ -38,8 +87,9 @@
       line-height: 1
       border-radius: 30px
       width: 100%
-      +r(767)
+      +r(992)
         border-radius: 10px
         margin-bottom: 30px
     button
       width: 100%
+      +tr
