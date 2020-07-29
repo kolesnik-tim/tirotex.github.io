@@ -3,6 +3,12 @@ title: Index Page
 ---
 extends layouts/_layout
 block content
+  block header
+    include partials/_header
+
+
+
+    
   include ./home/intro
   section.home-product
     .container
@@ -800,3 +806,7 @@ block content
 
 
         
+  block footer
+    include partials/_footer
+  block pop-up
+    include partials/_pop-up

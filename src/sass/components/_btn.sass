@@ -1,0 +1,39 @@
+.button
+  padding: 10px 15px
+  border-radius: 20px
+  font-size: 14px
+  color: #FFFFFF
+  text-transform: uppercase
+  text-align: center
+  display: inline-block
+  line-height: 1
+  +tr
+  &-primary
+    background: $beige
+    font-size: 12px
+    padding: 14px
+    font-weight: 500
+    &:hover
+      background: $black
+      color: #fff
+  &-secondary
+    background: $black
+    &:hover
+      background: $beige
+      color: #fff
+
+  &-transparent
+    text-transform: none
+    border: 2px solid $beige
+    color: $black
+    &:hover
+      background: $beige
+      color: #fff
+
+  &-transparent-black
+    border: 2px solid $black
+    color: $black
+    padding: 15px
+    &:hover
+      background: $black
+      color: #fff

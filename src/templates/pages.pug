@@ -3,9 +3,28 @@ title: All Pages
 ---
 extends layouts/_layout
 block content
+  block header
+    include partials/_header
+  
+  
   .pages
     .container
       h1 All Pages
       ul
         li
           a(href="index.html") Home
+        li
+          a(href="404.html") 404
+        li
+          a(href="contact.html") Contact
+        li
+          a(href="news.html") News
+        li
+          a(href="news.html") News
+
+
+
+  block footer
+    include partials/_footer
+  block pop-up
+    include partials/_pop-up

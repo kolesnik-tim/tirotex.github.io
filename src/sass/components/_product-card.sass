@@ -146,6 +146,35 @@
       box-sizing: border-box
       +r(767)
         padding: 11px
+  &__btn
+    display: flex
+    justify-content: space-between
+    padding-top: 5px
+    border-top: 1px solid $black
+    +r(767)
+      border-top: none
+    span
+      color: $black
+      +Montserrat-reg-14()
+      border-bottom: 1px solid transparent
+      +r(767)
+        display: none
+    a
+      color: $beige
+      +Montserrat-reg-14()
+      border-bottom: 1px solid transparent
+      +tr
+      +r(767)
+        border-radius: 30px
+        border: solid 1px $black
+        padding: 10px
+        width: 100%
+        text-align: center
+        font-size: 12px
+        text-transform: uppercase
+        color: $black
+      &:hover
+        border-color: $beige
 
 
 
@@ -162,3 +191,23 @@
         padding: 10px 0
       .button
         border-width: 1px
+
+
+  &--news
+    padding: 10px
+    width: calc(100% - 12px)
+    margin: 0 6px 30px
+    +r(1200)
+      margin: 0 0 30px
+      width: 100%
+    +r(767)
+      margin-bottom: 20px
+    .product-card__description 
+      h4
+        margin-bottom: 0
+        +r(767)
+          text-align: left
+          margin-bottom: 10px
+      div
+        padding-bottom: 5px
+      

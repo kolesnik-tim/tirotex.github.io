@@ -1,3 +1,63 @@
 //- //BEGIN pop-up
-//- .pop-up
+.entrance#entrance.container
+  .entrance__container
+    a(href="#").entrance-close
+      i.icon-close
+    form.form-primary
+      h2 Войти в личный кабинет
+      input(type="email" name="entrance-email" placeholder="E-mail")
+      input(type="password" name="entrance-password" placeholder="Пароль")
+      button(type="submit").button.button-secondary Войти
+      .entrance__btn
+        a(href="#").forgot-password Забыли пароль?
+        a(href="#registration" rel="modal:open") Регистрация
+    form.form-secondary
+      h2 Восстановление пароля
+      input(type="email" name="email-forgot" placeholder="E-mail")
+      button(type="submit").button.button-secondary Напомнить
+
+.pop-up-bg
+.pop-up#order.pop-up-order
+  a(href="#order" rel="modal:close").pop-up__close
+    i.icon-close
+  h2 Заказать
+  p Наш менеджер перезвонит вам в течении 30 минут для оформления заказа.
+  form
+    span Ваше имя*:
+    input(type="text" name="order-name" required)
+    span Телефон*:
+    input(type="tel" name="order-phone" required)
+    button(type="submit").button.button-secondary Заказать
+
+
+
+.pop-up#back-call.pop-up-order
+  a(href="#back-call" rel="modal:close").pop-up__close
+    i.icon-close
+  h2 обратный звонок
+  p Наш менеджер перезвонит вам в течении 30 минут для оформления заказа.
+  form
+    span Ваше имя*:
+    input(type="text" name="back-call-name" required)
+    span Телефон*:
+    input(type="tel" name="back-call-phone" required)
+    button(type="submit").button.button-secondary Заказать
+
+
+.pop-up#registration.pop-up-order.pop-up-order--registration
+  a(href="#registration" rel="modal:close").pop-up__close
+    i.icon-close
+  h2 Регистрация
+  form
+    span Ваше имя*:
+    input(type="text" name="registration-name" required)
+    span Телефон*:
+    input(type="tel" name="registration-phone" required)
+    span E-mail*:
+    input(type="email" name="registration-email" required)
+    label
+      input(type="checkbox" checked)
+      b Получать уведомления о новинках, скидках, акциях
+    button(type="submit").button.button-secondary Заказать
+
 //- //END pop-up

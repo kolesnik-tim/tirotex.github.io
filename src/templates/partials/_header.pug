@@ -16,9 +16,9 @@ header.header
             a(href="#") О нас
         ul
           li
-            a(href="#") Вход
+            a(href="#").entrance-open Вход
           li
-            a(href="#") Регистрация
+            a(href="#registration" rel="modal:open") Регистрация
   .header__body
     .container
       .header__body__row
@@ -30,7 +30,7 @@ header.header
               a(href="tel:+380935222973") +38 (093) 52-22-973
             li 
               a(href="tel:+380964822442") +38 (096) 48-22-442
-          a(href="#").button.button-primary Обратный звонок
+          a(href="#back-call" rel="modal:open").button.button-primary Обратный звонок
         .header__body__logo
           img(src="img/logo.png", alt="")
         .header__body__btn
@@ -298,8 +298,8 @@ header.header
     .mobile-menu__logo
       img(src="img/logo-mob.png", alt="")
     .mobile-menu__user
-      a(href="#") Вход
-      a(href="#") Регистрация
+      a(href="#").entrance-open Вход
+      a(href="#registration" rel="modal:open").registration-open Регистрация
     ul.mobile-menu__nav
       li
         span Постельное белье

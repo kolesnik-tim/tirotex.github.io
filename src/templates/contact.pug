@@ -1,0 +1,54 @@
+---
+title: Contact
+---
+extends layouts/_layout
+block content
+  block header
+    include partials/_header
+  
+  
+  .contact
+    .container
+      ul.breadcrumbs
+        li
+          a(href="#") Главная
+        li
+          a(href="#") Контакты
+      h1 КОНТАКТЫ
+      .row
+        .col-lg-6.order-lg-1.order-last
+          .contact__block.contact__form
+            h2 напишите нам
+            form
+              span Ваше имя*
+              input(type="text" name="name" required)
+              span E-mail*
+              input(type="email" name="email" required)
+              span Сообщение
+              textarea
+              button(type="submit").button.button-secondary ОТПРАВИТЬ
+        .col-lg-6.order-lg-2
+          .contact__img
+            img(src="img/contact.jpg", alt="")
+        .col-lg-12.order-lg-3
+          .contact__block.contact__info
+            .row
+              .col-lg-4.col-md-3
+                h2 График работы
+                p Пн-Сб 9.00-19.00
+              .col-lg-3.col-md-4
+                h2 Контакты
+                a(href="tel:+380935222973") +38 (093) 52-22-973
+                a(href="tel:+380964822442") +38 (096) 48-22-442
+              .col-lg-3.col-md-3
+                h2 e-mail
+                a(href="mailto:sale@tirotex.com.ua") sale@tirotex.com.ua
+              .col-lg-2.col-md-2
+                h2 Адрес
+                p г. Одесса
+
+
+  block footer
+    include partials/_footer
+  block pop-up
+    include partials/_pop-up

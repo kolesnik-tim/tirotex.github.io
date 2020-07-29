@@ -26,8 +26,8 @@
                 <li><a href="#">О нас</a></li>
               </ul>
               <ul>
-                <li><a href="#">Вход</a></li>
-                <li><a href="#">Регистрация</a></li>
+                <li><a class="entrance-open" href="#">Вход</a></li>
+                <li><a href="#registration" rel="modal:open">Регистрация</a></li>
               </ul>
             </div>
           </div>
@@ -40,7 +40,7 @@
                 <ul>
                   <li><a href="tel:+380935222973">+38 (093) 52-22-973</a></li>
                   <li> <a href="tel:+380964822442">+38 (096) 48-22-442</a></li>
-                </ul><a class="button button-primary" href="#">Обратный звонок</a>
+                </ul><a class="button button-primary" href="#back-call" rel="modal:open">Обратный звонок</a>
               </div>
               <div class="header__body__logo"><img src="img/logo.png" alt=""></div>
               <div class="header__body__btn"><a class="header__body__btn__liked" href="#"><i class="icon-heart-transparent"></i><span>3</span></a>
@@ -232,7 +232,7 @@
         <div class="menu-close"><i class="icon-close"></i></div>
         <div class="mobile-menu__content">
           <div class="mobile-menu__logo"><img src="img/logo-mob.png" alt=""></div>
-          <div class="mobile-menu__user"><a href="#">Вход</a><a href="#">Регистрация</a></div>
+          <div class="mobile-menu__user"><a class="entrance-open" href="#">Вход</a><a class="registration-open" href="#registration" rel="modal:open">Регистрация</a></div>
           <ul class="mobile-menu__nav">
             <li><span>Постельное белье<i class="icon-arrow-down"></i></span>
               <ul>
@@ -934,6 +934,32 @@
         </div>
       </footer>
       <!--END footer-->
+      <div class="entrance container" id="entrance">
+        <div class="entrance__container"><a class="entrance-close" href="#"><i class="icon-close"></i></a>
+          <form class="form-primary">
+            <h2>Войти в личный кабинет</h2><input type="email" name="entrance-email" placeholder="E-mail"><input type="password" name="entrance-password" placeholder="Пароль"><button class="button button-secondary" type="submit">Войти</button>
+            <div class="entrance__btn"><a class="forgot-password" href="#">Забыли пароль?</a><a href="#registration" rel="modal:open">Регистрация</a></div>
+          </form>
+          <form class="form-secondary">
+            <h2>Восстановление пароля</h2><input type="email" name="email-forgot" placeholder="E-mail"><button class="button button-secondary" type="submit">Напомнить</button>
+          </form>
+        </div>
+      </div>
+      <div class="pop-up-bg"></div>
+      <div class="pop-up pop-up-order" id="order"><a class="pop-up__close" href="#order" rel="modal:close"><i class="icon-close"></i></a>
+        <h2>Заказать</h2>
+        <p>Наш менеджер перезвонит вам в течении 30 минут для оформления заказа.</p>
+        <form><span>Ваше имя*:</span><input type="text" name="order-name" required><span>Телефон*:</span><input type="tel" name="order-phone" required><button class="button button-secondary" type="submit">Заказать</button></form>
+      </div>
+      <div class="pop-up pop-up-order" id="back-call"><a class="pop-up__close" href="#back-call" rel="modal:close"><i class="icon-close"></i></a>
+        <h2>обратный звонок</h2>
+        <p>Наш менеджер перезвонит вам в течении 30 минут для оформления заказа.</p>
+        <form><span>Ваше имя*:</span><input type="text" name="back-call-name" required><span>Телефон*:</span><input type="tel" name="back-call-phone" required><button class="button button-secondary" type="submit">Заказать</button></form>
+      </div>
+      <div class="pop-up pop-up-order pop-up-order--registration" id="registration"><a class="pop-up__close" href="#registration" rel="modal:close"><i class="icon-close"></i></a>
+        <h2>Регистрация</h2>
+        <form><span>Ваше имя*:</span><input type="text" name="registration-name" required><span>Телефон*:</span><input type="tel" name="registration-phone" required><span>E-mail*:</span><input type="email" name="registration-email" required><label><input type="checkbox" checked><b>Получать уведомления о новинках, скидках, акциях</b></label><button class="button button-secondary" type="submit">Заказать</button></form>
+      </div>
     </div>
     <!--END out-->
     <!--LOAD SCRIPTS-->

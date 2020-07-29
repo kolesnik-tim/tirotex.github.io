@@ -1,21 +1,188 @@
-// .pop-up
-//   &-close
-//     width: 30px
-//     height: 30px
-//     position: absolute
-//     right: 20px
-//     top: 20px
-//     span
-//       &:before, &:after
-//         content: ''
-//         width: 30px
-//         height: 2px
-//         background: $black
-//         position: absolute
-//         top: 13px
-//       &:before
-//         left: 0
-//         transform: rotate(45deg)
-//       &:after
-//         right: 0
-//         transform: rotate(-45deg)
+.entrance
+  position: absolute
+  width: 100%
+  top: 31px
+  left: 50%
+  transform: translate(-50%)
+  z-index: 10
+  display: none
+  +r(992)
+    top: 70px
+    height: 100vh
+    position: fixed
+  .entrance-close
+    display: none
+    position: absolute
+    top: 16px
+    right: 16px
+    +r(992)
+      display: block
+    .icon-close
+      color: $grey
+      font-size: 16px
+  &__container
+    width: 280px
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15)
+    background-color: #ffffff
+    padding: 30px 20px
+    position: absolute
+    right: 0
+    +r(992)
+      height: 100%
+      width: 100%
+      box-shadow: none
+    +r(992)
+      padding: 50px 15px 0
+  h2
+    +Montserrat-reg-14()
+    font-family: 'Montserrat'
+    color: #333333
+    text-transform: uppercase
+    text-align: center
+    padding-bottom: 20px
+    +r(992)
+      border-bottom: 1px solid $light-gray
+      padding-bottom: 15px
+      margin-bottom: 30px
+      font-size: 18px
+    +r(575)
+      width: calc(100% + 30px)
+      margin-left: -15px
+  input
+    width: 100%
+    margin-bottom: 10px
+  button
+    padding: 14px 
+    width: 100%
+  &__btn
+    display: flex
+    justify-content: space-between
+    margin-top: 20px
+    a
+      color: #333333
+      +Montserrat-12()
+      border-bottom: 1px solid #333333
+      &:hover
+        color: $beige
+        border-color: $beige
+
+
+  .form-secondary
+    display: none
+
+
+
+
+
+.pop-up
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 11
+  border-radius: 10px
+  background: #fff
+  display: none
+  &-bg
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(40, 38, 35, 0.44)
+    z-index: 10
+    display: none
+  &__close
+    position: absolute
+    top: 16px
+    right: 16px
+    i
+      font-size: 16px
+      color: $black
+  &-order
+    padding: 60px
+    max-width: 470px
+    width: 100%
+    +rh(475)
+      top: 15px
+      transform: translate(-50%, 0%)
+      height: calc(100% - 30px)
+      overflow: auto
+    +r(767)
+      padding: 35px 15px
+      width: calc(100% - 30px)
+    h2
+      font-family: 'Montserrat'
+      color: $black
+      +Montserrat-18()
+      font-weight: normal
+      margin-bottom: 20px
+      padding-bottom: 15px
+      border-bottom: 1px solid $light-gray
+      text-transform: uppercase
+      +r(767)
+        width: calc(100% + 30px)
+        margin-left: -15px
+        text-align: center
+    p, span
+      color: #333333
+      +Montserrat-12()
+      margin-bottom: 20px
+      +r(767)
+        text-align: center
+    span
+      display: block
+      margin-bottom: 10px
+      +r(767)
+        text-align: left
+    input
+      width: 100%
+      margin-bottom: 15px
+    button
+      margin-top: 20px
+      padding: 14px 
+      width: 100%
+    label
+      margin-bottom: 5px
+      input
+        display: none
+        &:checked + b:before
+          color: $black
+      b
+        color: #333333
+        +Montserrat-12()
+        font-weight: normal
+        padding-left: 25px
+        position: relative
+        display: flex
+        align-items: flex-start
+        cursor: pointer
+        +tr
+        &::before
+          content: '\e905'
+          font-family: 'icomoon' !important
+          width: 14px
+          height: 14px
+          +center
+          border-radius: 3px
+          border: 1px solid $black
+          position: absolute
+          left: 0
+          top: 3px
+          font-size: 8px
+          color: transparent
+          +tr
+
+    &--registration
+      max-width: 535px
+      padding: 55px 95px
+      +r(767)
+        padding: 55px 16px 100px
+        width: 100%
+        max-width: 100%
+        height: 100%
+        border-radius: 0
+        top: 58px
+        transform: none
+        left: 0
+        overflow: auto
