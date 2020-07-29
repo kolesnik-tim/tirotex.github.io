@@ -5,7 +5,7 @@
 var swiper = new Swiper('.swiper-news', {
   slidesPerView: 2,
   spaceBetween: 10,
-  slidesPerGroup: 2,
+  slidesPerGroup: 4,
   loop: true,
   breakpoints: {
     1200: {
@@ -29,7 +29,7 @@ var swiper = new Swiper('.swiper-news', {
 var swiper = new Swiper('.swiper-shares', {
   slidesPerView: 2,
   spaceBetween: 10,
-  slidesPerGroup: 2,
+  slidesPerGroup: 4,
   loop: true,
   breakpoints: {
     1200: {

@@ -1,0 +1,191 @@
+.news-article
+  .container
+    +rmin(1230)
+      max-width: 790px !important
+  &__title
+    padding: 60px 0 30px
+    display: flex
+    justify-content: space-between
+    +r(767)
+      flex-direction: column
+      padding: 30px 0 20px
+    h1
+      color: $black
+      +Montserrat-24()
+      text-transform: uppercase
+      font-family: 'Montserrat'
+      font-weight: normal
+      +r(767)
+        font-size: 18px
+        color: #333333
+        text-align: center
+        font-family: 'Balsamiq Sans'
+        margin-bottom: 20px
+    span
+      font-size: 14px
+      font-weight: normal
+      color: $light-black
+      display: block
+      margin-left: 20px
+      margin-top: 5px
+      +r(767)
+        width: 100%
+        text-align: right
+        margin: 0
+  &__content
+    p
+      font-size: 14px
+      font-weight: normal
+      line-height: 1.6
+      letter-spacing: 0.28px
+      color: #000000
+      margin-bottom: 20px
+      text-align: justify
+    img
+      max-width: 585px
+      width: 100%
+      +relative-x
+      margin: 30px 0 50px
+      +r(767)
+        margin: 10px 0 30px
+
+
+  &__comments
+    padding: 30px 0 15px
+    +r(767)
+      padding: 0
+    &__row
+      display: flex
+      padding: 10px 0
+      border-bottom: 1px solid $light-gray
+      border-top: 1px solid $light-gray
+      justify-content: space-between
+      align-items: center
+      position: relative
+      +r(767)
+        border: none
+        flex-direction: column
+        align-items: flex-end
+    &__star
+      span
+        color: $grey
+        +Montserrat-12()
+        display: block
+    &__social
+      display: flex
+      align-items: center
+      +r(767)
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translate(0, -50%)
+        flex-direction: column
+        align-items: flex-start
+      p
+        color: $black
+        +Montserrat-reg-14()
+        margin-right: 20px
+        +r(767)
+          margin-bottom: 5px
+          margin-right: 0
+    strong
+      font-size: 14px
+      font-weight: normal
+      color: $black
+      display: block
+      +r(767)
+        margin-top: 5px
+    &__block
+      display: flex
+      padding: 25px 0 20px
+      border-bottom: 1px solid $light-gray
+      +r(767)
+        flex-direction: column
+        align-items: flex-start
+        padding: 30px 0 15px
+      b
+        color: $black
+        +Montserrat-reg-14()
+        font-weight: normal
+        max-width: 200px
+        width: 100%
+        +r(767)
+          display: flex
+          justify-content: space-between
+          max-width: 100%
+          align-items: center
+          margin-bottom: 15px
+        span
+          color: $grey
+          +Montserrat-12()
+          display: block
+          margin-top: 6px
+      p
+        color: $black
+        +Montserrat-reg-14()
+        a
+          margin-top: 15px
+          font-size: 12px
+          font-weight: normal
+          line-height: 1.84
+          color: $black
+          display: block
+          &:hover
+            color: $beige
+
+
+
+  &__form
+    padding: 30px 0 40px
+    border-bottom: 1px solid $light-gray
+    +r(767)
+      border-bottom: none
+      padding-bottom: 0
+    h2
+      color: #000000
+      +Montserrat-18()
+      font-family: 'Montserrat'
+      font-weight: normal
+      margin-bottom: 20px
+      text-transform: uppercase
+      +r(767)
+        font-family: 'Balsamiq Sans'
+    span
+      color: #333333
+      +Montserrat-12()
+      display: block
+      margin-bottom: 10px
+    input
+      width: 100%
+      margin-bottom: 20px
+      +r(767)
+        margin-bottom: 15px
+    textarea
+      margin-bottom: 30px
+      width: 100%
+      height: 112px
+      +r(767)
+        margin-bottom: 15px
+    button
+      max-width: 380px
+      width: 100%
+      padding: 14px
+      +r(767)
+        max-width: 100%
+
+  &__btn
+    display: flex
+    justify-content: space-between
+    padding: 55px 0 140px
+    +r(767)
+      padding: 50px 0
+    a
+      padding: 20px 66px
+      border-radius: 30px
+      border-width: 1px
+      +r(767)
+        padding: 10px 30px
+        span
+          display: none
+      +r(374)
+        padding: 10px 15px
