@@ -186,3 +186,113 @@
         transform: none
         left: 0
         overflow: auto
+    
+
+    &--reviews
+      max-width: 645px
+      padding: 30px 25px 45px
+      +rh(670)
+        top: 15px
+        transform: translate(-50%, 0%)
+        height: calc(100% - 30px)
+        overflow: auto
+      +r(767)
+        padding: 55px 16px 100px
+        width: 100%
+        max-width: 100%
+        height: 100%
+        border-radius: 0
+        top: 58px
+        transform: none
+        left: 0
+        overflow: auto
+      h2
+        border-bottom: none
+        text-align: center
+        font-size: 24px
+        +r(767)
+          margin-bottom: 5px
+      .pop-up__close 
+        top: 40px
+        right: 25px
+        +r(767)
+          display: none
+        i
+          font-size: 15px
+      textarea
+        width: 100%
+        height: 105px
+        margin-bottom: 20px
+        +r(767)
+          margin-bottom: 15px
+      input
+        margin-bottom: 20px
+        +r(767)
+          margin-bottom: 15px
+      label b
+        font-size: 14px
+        padding-left: 30px
+        +r(767)
+          font-size: 12px
+        &::before
+          width: 20px
+          height: 20px
+          font-size: 11px
+          top: 0
+          +r(767)
+            top: -2px
+      .pop-up-order__btn
+        padding: 30px 0 0
+        display: flex
+        +r(575)
+          flex-direction: column
+        a, button
+          width: 100%
+          font-size: 14px
+          padding: 17px
+          border-radius: 30px
+          margin-top: 0
+          border-width: 1px
+        button
+          +r(575)
+            padding: 19px
+        a
+          margin-right: 30px
+          +r(575)
+            margin-bottom: 20px
+            margin-right: 0
+      .pop-up-order__reviews
+        display: flex
+        justify-content: space-around
+        padding: 0 50px
+        padding-bottom: 30px
+        +r(575)
+          padding: 0 0 30px
+          justify-content: space-between
+        li
+          +center-column
+          cursor: pointer
+          span
+            width: 40px
+            height: 40px
+            position: relative
+            +center
+            margin-bottom: 5px
+            i
+              position: absolute
+              font-size: 38px
+              +tr
+            .icon-star
+              opacity: 0
+
+          p
+            color: #000000
+            +Montserrat-12()
+            margin-bottom: 0
+            +r(575)
+              display: none
+          &.active, &.hover
+            span .icon-star
+              opacity: 1
+            span .icon-star-transparent
+              opacity: 0

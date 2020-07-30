@@ -60,4 +60,50 @@
       b Получать уведомления о новинках, скидках, акциях
     button(type="submit").button.button-secondary Заказать
 
+
+
+.pop-up#reviews.pop-up-order.pop-up-order--reviews
+  a(href="#reviews" rel="modal:close").pop-up__close
+    i.icon-close
+  h2 Написать отзыв
+  ul.pop-up-order__reviews
+    li
+      span
+        i.icon-star
+        i.icon-star-transparent
+      p Плохо
+    li
+      span
+        i.icon-star
+        i.icon-star-transparent
+      p Так себе
+    li
+      span
+        i.icon-star
+        i.icon-star-transparent
+      p Нормально
+    li
+      span
+        i.icon-star
+        i.icon-star-transparent
+      p Хорошо
+    li
+      span
+        i.icon-star
+        i.icon-star-transparent
+      p Отлично
+  form
+    span Комментарий
+    textarea
+    span Ваше имя*:
+    input(type="text" name="reviews-name" required)
+    span E-mail*:
+    input(type="email" name="reviews-email" required)
+    label
+      input(type="checkbox" checked)
+      b Уведомлять об ответах по электронной почте
+    .pop-up-order__btn
+      a(href="#reviews" rel="modal:close").button.button-transparent-black отменить
+      button(type="submit").button.button-secondary Оставить отзыв
+
 //- //END pop-up

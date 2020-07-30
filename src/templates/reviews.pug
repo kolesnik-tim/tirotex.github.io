@@ -1,0 +1,118 @@
+---
+title: Reviews
+---
+extends layouts/_layout
+block content
+  block header
+    include partials/_header
+  
+  .container
+    ul.breadcrumbs
+      li
+        a(href="#") Главная
+      li
+        a(href="#") Последние отзывы
+  .reviews
+    .container
+      .reviews__title
+        h1 Последние отзывы
+        a(href="#reviews" rel="modal:open").button.button-primary оставить отзыв
+
+
+      .reviews__block
+        .reviews__block__img
+          img(src="img/product/product.jpg", alt="")
+        .reviews__block__info
+          h3 Постельный комплект Butterfly (Батерфлай) 
+          span Ксения
+          b 25 декабря 2018
+          ul.star
+            li
+              i.icon-star
+            li
+              i.icon-star
+            li
+              i.icon-star
+            li
+              i.icon-star
+            li
+              i.icon-star-transparent
+          p.hidden-xs Комплект получила, в живую выглядит темнее, основной фон серый котики очень миленькие, сын очень доволен, качество ткани и пошива.
+          a(href="#").hidden-xs ответить
+        .reviews__block__mobile
+          p Комплект получила, в живую выглядит темнее, основной фон серый котики очень миленькие, сын очень доволен, качество ткани и пошива.
+          a(href="#") ответить
+      .reviews__block
+        .reviews__block__img
+          img(src="img/product/product.jpg", alt="")
+        .reviews__block__info
+          h3 Постельный комплект Butterfly (Батерфлай) 
+          span Ксения
+          b 25 декабря 2018
+          ul.star
+            li
+              i.icon-star
+            li
+              i.icon-star
+            li
+              i.icon-star
+            li
+              i.icon-star
+            li
+              i.icon-star-transparent
+          p.hidden-xs Комплект получила, в живую выглядит темнее, основной фон серый котики очень миленькие, сын очень доволен, качество ткани и пошива.
+          a(href="#").hidden-xs ответить
+        .reviews__block__mobile
+          p Комплект получила, в живую выглядит темнее, основной фон серый котики очень миленькие, сын очень доволен, качество ткани и пошива.
+          a(href="#") ответить
+      .reviews__block
+        .reviews__block__img
+          img(src="img/product/product.jpg", alt="")
+        .reviews__block__info
+          h3 Постельный комплект Butterfly (Батерфлай) 
+          span Ксения
+          b 25 декабря 2018
+          ul.star
+            li
+              i.icon-star
+            li
+              i.icon-star
+            li
+              i.icon-star
+            li
+              i.icon-star
+            li
+              i.icon-star-transparent
+          p.hidden-xs Комплект получила, в живую выглядит темнее, основной фон серый котики очень миленькие, сын очень доволен, качество ткани и пошива.
+          a(href="#").hidden-xs ответить
+        .reviews__block__mobile
+          p Комплект получила, в живую выглядит темнее, основной фон серый котики очень миленькие, сын очень доволен, качество ткани и пошива.
+          a(href="#") ответить
+        
+      .page-buttons
+        a(href="#").button.button-transparent 
+          span Больше отзывов
+          span Еще
+        ul
+          li.active
+            a(href="#") 1
+          li
+            a(href="#") 2
+          li
+            a(href="#") 3
+          li
+            a(href="#") 4
+          li
+            a(href="#") 5
+          li 
+            span ...
+          li
+            a(href="#") 884
+
+
+
+
+  block footer
+    include partials/_footer
+  block pop-up
+    include partials/_pop-up

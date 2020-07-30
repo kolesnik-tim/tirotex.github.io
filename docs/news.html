@@ -530,6 +530,29 @@
         <h2>Регистрация</h2>
         <form><span>Ваше имя*:</span><input type="text" name="registration-name" required><span>Телефон*:</span><input type="tel" name="registration-phone" required><span>E-mail*:</span><input type="email" name="registration-email" required><label><input type="checkbox" checked><b>Получать уведомления о новинках, скидках, акциях</b></label><button class="button button-secondary" type="submit">Заказать</button></form>
       </div>
+      <div class="pop-up pop-up-order pop-up-order--reviews" id="reviews"><a class="pop-up__close" href="#reviews" rel="modal:close"><i class="icon-close"></i></a>
+        <h2>Написать отзыв</h2>
+        <ul class="pop-up-order__reviews">
+          <li><span><i class="icon-star"></i><i class="icon-star-transparent"></i></span>
+            <p>Плохо</p>
+          </li>
+          <li><span><i class="icon-star"></i><i class="icon-star-transparent"></i></span>
+            <p>Так себе</p>
+          </li>
+          <li><span><i class="icon-star"></i><i class="icon-star-transparent"></i></span>
+            <p>Нормально</p>
+          </li>
+          <li><span><i class="icon-star"></i><i class="icon-star-transparent"></i></span>
+            <p>Хорошо</p>
+          </li>
+          <li><span><i class="icon-star"></i><i class="icon-star-transparent"></i></span>
+            <p>Отлично</p>
+          </li>
+        </ul>
+        <form><span>Комментарий</span><textarea></textarea><span>Ваше имя*:</span><input type="text" name="reviews-name" required><span>E-mail*:</span><input type="email" name="reviews-email" required><label><input type="checkbox" checked><b>Уведомлять об ответах по электронной почте</b></label>
+          <div class="pop-up-order__btn"><a class="button button-transparent-black" href="#reviews" rel="modal:close">отменить</a><button class="button button-secondary" type="submit">Оставить отзыв</button></div>
+        </form>
+      </div>
     </div>
     <!--END out-->
     <!--LOAD SCRIPTS-->
