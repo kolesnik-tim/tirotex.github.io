@@ -58,30 +58,6 @@
           font-size: 30px
           +r(767)
             font-size: 20px
-      input
-        display: none
-        &:checked + div
-          .icon-heart-transparent
-            opacity: 0
-          .icon-heart
-            opacity: 1 !important
-      label
-        width: 27px
-        height: 27px
-        cursor: pointer
-        +r(767)
-          width: 18px
-          height: 18px
-        i
-          position: absolute
-          display: block
-          // color: $black
-          font-size: 24px
-          +tr
-          +r(767)
-            font-size: 16px
-        .icon-heart
-          opacity: 0
 
 
   &__description
@@ -124,6 +100,7 @@
       text-transform: uppercase
       color: $black
       margin-bottom: 20px
+      font-weight: normal
       +center
       +r(767)
         font-size: 14px

@@ -72,6 +72,7 @@
     "lodash": "^4.17.11"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "object-fit-images": "^3.2.4",
     "swiper": "^6.0.4"
   }

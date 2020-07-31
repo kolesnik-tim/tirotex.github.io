@@ -326,3 +326,50 @@
     p
       color: #000000
       +Montserrat-reg-14()
+
+
+
+
+
+  &-size
+    max-width: 1200px
+    width: calc(100% - 30px)
+    padding: 95px 100px 30px
+    +rmin(767)
+      +rh(655)
+        top: 15px
+        transform: translate(-50%, 0%)
+        height: calc(100% - 30px)
+        overflow: auto
+    +r(992)
+      padding: 50px 20px 30px
+    +r(767)
+      padding: 20px 10px
+      +rh(590)
+        top: 15px
+        transform: translate(-50%, 0%)
+        height: calc(100% - 30px)
+        overflow: auto
+    +r(374)
+      width: 100%
+    .pop-up__close
+      right: 50px
+      top: 50px
+      +r(992)
+        top: -25px
+        right: 0
+        i
+          color: #fff
+      +rmin(767)
+        +rh(655)
+          top: 10px
+          right: 10px
+          i
+            color: #000 !important
+
+      +r(767)
+        +rh(590)
+          top: 10px
+          right: 10px
+          i
+            color: #000 !important

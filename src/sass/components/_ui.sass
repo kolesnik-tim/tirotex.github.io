@@ -59,6 +59,105 @@ input, textarea
 
 
 
+//fancybox
+.fancybox-close-small
+  right: -45px
+  padding: 0
+  svg
+    font-size: 30px
+.fancybox-button
+  opacity: 1 !important
+  visibility: visible !important
+  +center
+  i
+    font-size: 18px
+
+
+//quantity
+.quantity-block
+  margin-top: 20px
+  width: 123px
+  height: 30px
+  border-radius: 8px
+  border: solid 1px #cccccc
+  background-color: #f6f6f6
+  display: flex
+  overflow: hidden
+  +r(767)
+    margin-top: 15px
+  button, input
+    width: 42px
+    height: 100%
+  button
+    +center
+    background: none
+    font-size: 15px
+    line-height: 1
+    outline: none
+    i.icon-minus
+      font-size: 1.5px
+  input
+    border: none
+    border-left: solid 1px #cccccc
+    border-right: solid 1px #cccccc
+    border-radius: 0
+    padding: 0 5px
+    text-align: center
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+
+
+
+.tooltip-open
+  position: relative
+.tooltip-block
+  width: 238px
+  height: 68px
+  background-color: #f6f6f6
+  padding: 6px 10px
+  position: absolute
+  bottom: calc(100% + 10px)
+  left: -30px
+  border-radius: 5px
+  display: none
+  p
+    font-size: 10px
+    font-weight: normal
+    line-height: 1.3
+    letter-spacing: 0.2px
+    color: $black
+
+
+
+
+.btn-heart
+  width: 27px
+  height: 27px
+  cursor: pointer
+  +r(767)
+    width: 18px
+    height: 18px
+  i
+    position: absolute
+    display: block
+    // color: $black
+    font-size: 24px
+    +tr
+    +r(767)
+      font-size: 16px
+  .icon-heart
+    opacity: 0
+  input
+    display: none
+    &:checked + div
+      .icon-heart-transparent
+        opacity: 0
+      .icon-heart
+        opacity: 1 !important
+    
+
+
 
 .breadcrumbs
   display: flex

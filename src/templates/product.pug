@@ -1,0 +1,1061 @@
+---
+title: Product
+---
+extends layouts/_layout
+block content
+  block header
+    include partials/_header
+  
+
+
+  .product  
+    .container(style="order: 2")
+      ul.breadcrumbs
+        li
+          a(href="#") Главная
+        li
+          a(href="#") Постельное белье
+        li
+          a(href="#") 1.5 постельные комплекты
+        li
+          a(href="#") Постельный комплект Butterfly (Батерфлай)
+    .container(style="order: 2")
+      .product__title
+        h1 Постельный комплект Butterfly (Батерфлай) Если длинное название
+        label.btn-heart
+          input(type="checkbox")
+          div
+            i.icon-heart-transparent
+            i.icon-heart
+    .product__card(style="order: 2")
+      .container
+        .row
+          .col-lg-6
+            .product__slider
+              .swiper-container.gallery-top
+                .swiper-wrapper
+                  .swiper-slide
+                    a(href="img/home/intro-img-1.jpg" data-fancybox="gallery")
+                      img(src="img/home/intro-img-1.jpg", alt="")
+                  .swiper-slide
+                    a(href="img/home/intro-img-2.jpg" data-fancybox="gallery")
+                      img(src="img/home/intro-img-2.jpg", alt="")
+                  .swiper-slide
+                    a(href="img/home/intro-img-1.jpg" data-fancybox="gallery")
+                      img(src="img/home/intro-img-1.jpg", alt="")
+                  .swiper-slide
+                    a(href="img/home/intro-img-2.jpg" data-fancybox="gallery")
+                      img(src="img/home/intro-img-2.jpg", alt="")
+                  .swiper-slide
+                    a(href="img/home/intro-img-1.jpg" data-fancybox="gallery")
+                      img(src="img/home/intro-img-1.jpg", alt="")
+                  .swiper-slide
+                    a(href="img/home/intro-img-2.jpg" data-fancybox="gallery")
+                      img(src="img/home/intro-img-2.jpg", alt="")
+                  .swiper-slide
+                    a(href="img/home/intro-img-1.jpg" data-fancybox="gallery")
+                      img(src="img/home/intro-img-1.jpg", alt="")
+                  .swiper-slide
+                    a(href="img/home/intro-img-2.jpg" data-fancybox="gallery")
+                      img(src="img/home/intro-img-2.jpg", alt="")
+                  .swiper-slide
+                    a(href="img/home/intro-img-1.jpg" data-fancybox="gallery")
+                      img(src="img/home/intro-img-1.jpg", alt="")
+                  .swiper-slide
+                    a(href="img/home/intro-img-2.jpg" data-fancybox="gallery")
+                      img(src="img/home/intro-img-2.jpg", alt="")
+                // Add Arrows
+                .swiper-button-next
+                  i.icon-arrow-right
+                .swiper-button-prev
+                  i.icon-arrow-left
+              .swiper-container.gallery-thumbs
+                .swiper-wrapper
+                  .swiper-slide(style='background-image:url(./img/product/product.jpg)')
+                  .swiper-slide(style='background-image:url(./img/home/intro-img-2.jpg)')
+                  .swiper-slide(style='background-image:url(./img/product/product.jpg)')
+                  .swiper-slide(style='background-image:url(./img/home/intro-img-2.jpg)')
+                  .swiper-slide(style='background-image:url(./img/product/product.jpg)')
+                  .swiper-slide(style='background-image:url(./img/home/intro-img-2.jpg)')
+                  .swiper-slide(style='background-image:url(./img/product/product.jpg)')
+                  .swiper-slide(style='background-image:url(./img/home/intro-img-2.jpg)')
+                  .swiper-slide(style='background-image:url(./img/product/product.jpg)')
+                  .swiper-slide(style='background-image:url(./img/home/intro-img-2.jpg)')
+              .product__slider__social
+                p Поделиться
+                .social-icon
+                  a(href="#")
+                    i.icon-viber
+                      .path1
+                      .path2
+                  a(href="#")
+                    i.icon-telegram
+                  a(href="#")
+                    i.icon-fb
+          .col-lg-6
+            form.product__info
+              h3 Доступные цвета:
+              .product__info__color
+                a(href="#")
+                  img(src="img/product/product.jpg", alt="")
+                a(href="#")
+                  img(src="img/product/product.jpg", alt="")
+                a(href="#")
+                  img(src="img/product/product.jpg", alt="")
+                a(href="#").active
+                  img(src="img/product/product.jpg", alt="")
+                a(href="#").not
+                  img(src="img/product/product.jpg", alt="")
+                a(href="#")
+                  img(src="img/product/product.jpg", alt="")
+                a(href="#")
+                  img(src="img/product/product.jpg", alt="")
+              .product__info__cost
+                b.red
+                  s 460 грн
+                  | 460 грн
+                p.not Нет в наличии
+                  span Код товара: 1972
+              h3 Размеры: 
+                a(href="#size" rel="modal:open") Подробные размеры
+              .product__info__size
+                div
+                  label
+                    input(type="radio" name="size")
+                    span Полуторный - 460грн
+                div
+                  label
+                    input(type="radio" name="size")
+                    span Евро - 510грн
+                div
+                  label
+                    input(type="radio" name="size" disabled)
+                    span Евро+ - 560грн
+                  a(href="#") Сообщить о наличии
+                div
+                  label
+                    input(type="radio" name="size")
+                    span 2-х спальный - 560грн
+                div
+                  label
+                    input(type="radio" name="size")
+                    span 2-х спальный МАКСИ - 620грн 
+                div
+                  label
+                    input(type="radio" name="size")
+                    span Семейный - 680грн
+              h3 Количество:
+              .quantity-block
+                button
+                  i.icon-minus
+                input(type="number" value="1" readonly)
+                button
+                  i.icon-plus
+              .product__info__pillowslip
+                h3 Наволочки:
+                  a(href="#").tooltip-open
+                    i.icon-question
+                    .tooltip-block
+                      p Во всех комплектах наволочки 70*70см. Мы сразу можем перешить под нужный вам размер. Индивидуальный размер указывайте в комментарии к заказу
+                .product__info__pillowslip__row
+                  label
+                    input(type="radio" name="pillowslip" checked)
+                    span Стандарт - 70*70см
+                  label
+                    input(type="radio" name="pillowslip")
+                    span 50*70см (+40 грн)
+                  label
+                    input(type="radio" name="pillowslip")
+                    span Индивидуальный
+              .product__info__btn
+                a(href="#").button.button-secondary Добавить в корзину
+                a(href="#order" rel="modal:open").button.button-transparent-black купить в один клик
+                    
+                    
+                
+
+
+              
+
+      
+
+
+    .product__tabs(style="order:2")
+      .container
+        .product__tabs__content.tabs
+          ul.tabs__caption
+            li.active Уход
+            li Характеристики
+            li РАзмер
+            li Доставка и оплата
+            li Отзывы(25)
+          .tabs__content.active
+            h5 Уход
+            ul.tabs__dropdown.product__maintenance
+              li 
+                p 1. Стирка. Бязевое постельное белье разрешается стирать как вручную, так и в стиральной машине. Следуйте нашим рекомендациям по правильному уходу за постелью и она прослужит Вам долгие годы!
+                ol
+                  li Температурный режим рекомендуется выбирать 40-50°С;
+                  li барабан стиральной машины заполняйте не более, чем на 50-60% для более эффективной очистки и полоскания белья;
+                  li при сушке постели ставьте до 600-800 оборотов в минуту;
+                  li обязательно выворачивайте перед стиркой пододеяльник и наволочки - это позволяет цвету лучше сохраняться;
+                  li порошки использовать для цветных тканей. Категорически запрещено использовать отбеливатели! Сушить сразу после стирки
+              li 
+                p 2. Глажка. Некоторые хозяйки не гладят белье, но не в случае бязевой ткани. После глажки ткань становится приятней но ощупь, мягче и намного аккуратнее  для интерьера вашей спальни.
+                p Температуру нагрева утюга выбирайте до 150-200°С;
+                  span Совет! Интернет-магазин Тиротекс рекомендует менять постельное белье еженедельно. 
+                p Внимание! Картинка является ознакомительным материалом. Реальное расположение рисунка и оттенок цвета может не на 100% совпадать с изображением.
+          
+          .tabs__content
+            h5 Характеристики
+            .tabs__dropdown.product__characteristic
+              table
+                tr
+                  td Тип ткани
+                  td Бязь
+                tr
+                  td Состав
+                  td 100% хлопок
+                tr
+                  td Плотность ткани
+                  td 115 г/м²
+                tr
+                  td Производитель
+                  td Tirotex
+                tr
+                  td Страна производства
+                  td 
+                    span Тирасполь (
+                    | Молдавия
+                    span )	
+                tr
+                  td Вес комплекта
+                  td 1.5-2 кг
+                
+          .tabs__content
+            h5 Размеры
+            .tabs__dropdown.size-table
+              table
+                tr
+                  th
+                  th Наволочки
+                  th Простынь
+                  th Пододеяльник
+                tr
+                  td 
+                    .size-table__img
+                      div
+                        img(src="img/product-card/1-5.png", alt="")
+                      p 1.5 спальные комплекты
+                  td
+                    span 70х70 (2)
+                  td
+                    span 145х215
+                  td
+                    span 144х215
+                tr
+                  td 
+                    .size-table__img
+                      div
+                        img(src="img/product-card/2.png", alt="")
+                      p 2х спальные комплекты
+                  td
+                    span 70х70 (2)
+                  td
+                    span 175х215
+                  td
+                    span 175х215
+                tr
+                  td 
+                    .size-table__img
+                      div
+                        img(src="img/product-card/2-max.png", alt="")
+                      p 2х спальные МАКСИ
+                  td
+                    span 70х70 (2)
+                  td
+                    span 240х215
+                  td
+                    span 175х215
+                tr
+                  td 
+                    .size-table__img
+                      div(style="width:65px")
+                        img(src="img/product-card/euro.png", alt="")
+                      p Евро
+                  td
+                    span 70х70 (2)
+                  td
+                    span 200х215
+                  td
+                    span 200х215
+                tr
+                  td 
+                    .size-table__img
+                      div
+                        img(src="img/product-card/euro-2.png", alt="")
+                      p Евро+
+                  td
+                    span 70х70 (2)
+                  td
+                    span 240х215
+                  td
+                    span 240х215
+                tr
+                  td 
+                    .size-table__img
+                      div
+                        img(src="img/product-card/family.png", alt="")
+                      p Семейный
+                  td
+                    span 70х70 (2)
+                  td
+                    span 240х215
+                  td
+                    span 144х215 (2)
+                tr
+                  td 
+                    .size-table__img
+                      div
+                        img(src="img/product-card/kids.png", alt="")
+                      p В кроватку
+                  td
+                    span 50х50
+                  td
+                    span 110х140
+                  td
+                    span 110х140
+
+          .tabs__content
+            h5 Доставка и оплата
+            .tabs__dropdown.product__delivery
+              .row
+                .col-lg-6
+                  h4 Доставка
+                  ul  
+                    li Доставка по Украине  
+                      p Наш интернет-магазин осуществляет доставку по всей Украине с помощью почтовых услуг компаний за счет получателя:
+                    li Новая почта;
+                    li Укр.почта.
+                      p Отправка товара производится на следующий день после заказа до 15 часов. В этот же день Ваш заказ будет отправлен почтовой компанией и доставлен в теч. 1-7 дней (по срокам выбранной почты) в место назначения.
+                .col-lg-6
+                  h4 Оплата
+                  p Оплата в нашем интернет-магазине осуществляется 3-мя способами:
+                  ul
+                    li наложенный платеж (2% от суммы заказа оплачивается почтовому сервису);
+                    li полная предоплата товара на карту ПриватБанка (экономия за наложенный платеж от 30 грн);
+                    li Номер карты: 5168 7426 0582 7975 (Зверяка Э.В.)
+                  p В случае предоплаты Вы экономите от 30 грн за пересылку денежных средств обратно.
+
+          .tabs__content
+            h5 Отзывы
+            .tabs__dropdown.product__reviews
+              .product__reviews__btn.hidden-sm.hidden-md.hidden-lg
+                a(href="#reviews" rel="modal:open").button.button-primary оставить отзыв
+              .product__reviews__row
+                .product__reviews__block
+                  h4 Ольга
+                  span 25 декабря 2018
+                  ul.star
+                    li
+                      i.icon-star
+                    li
+                      i.icon-star
+                    li
+                      i.icon-star
+                    li
+                      i.icon-star
+                    li
+                      i.icon-star-transparent
+                p Комплект получила, в живую выглядит темнее, основной фон серый котики очень миленькие, сын очень доволен, качество ткани и пошива.
+                  a(href="#") ответить
+              .product__reviews__row
+                .product__reviews__block
+                  h4 Ольга
+                  span 25 декабря 2018
+                  ul.star
+                    li
+                      i.icon-star
+                    li
+                      i.icon-star
+                    li
+                      i.icon-star
+                    li
+                      i.icon-star
+                    li
+                      i.icon-star-transparent
+                p Комплект получила, в живую выглядит темнее, основной фон серый котики очень миленькие, сын очень доволен, качество ткани и пошива.
+                  a(href="#") ответить
+              .product__reviews__row
+                .product__reviews__block
+                  h4 Ольга
+                  span 25 декабря 2018
+                  ul.star
+                    li
+                      i.icon-star
+                    li
+                      i.icon-star
+                    li
+                      i.icon-star
+                    li
+                      i.icon-star
+                    li
+                      i.icon-star-transparent
+                p Комплект получила, в живую выглядит темнее, основной фон серый котики очень миленькие, сын очень доволен, качество ткани и пошива.
+                  a(href="#") ответить
+              .page-buttons
+                a(href="#").button.button-transparent Еще
+                ul
+                  li.active
+                    a(href="#") 1
+                  li
+                    a(href="#") 2
+                  li
+                    a(href="#") 3
+                  li
+                    a(href="#") 4
+                  li
+                    a(href="#") 5
+                  li 
+                    span ...
+                  li
+                    a(href="#") 884
+              .product__reviews__btn.hidden-xs
+                a(href="#reviews" rel="modal:open").button.button-primary оставить отзыв/задать вопрос
+
+
+
+
+
+    section.home-product(style="order: 2")
+      .container
+        h2 ПОхожие товары
+        .slider
+          .swiper-container.swiper-news
+            .swiper-wrapper
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.top топ продаж
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong 560 грн
+                    a(href="#").button.button-primary Купить
+              
+
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.stock Акция
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong.discount
+                      s 460 грн
+                      | 560 грн
+                    a(href="#").button.button-primary Купить
+
+
+
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.new Новинка
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong.discount
+                      s 460 грн
+                      | 560 грн
+                    a(href="#").button.button-primary Купить
+
+
+
+
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.new Новинка
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong.discount
+                      s 460 грн
+                      | 560 грн
+                    a(href="#").button.button-primary Купить
+
+
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.new Новинка
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong.discount
+                      s 460 грн
+                      | 560 грн
+                    a(href="#").button.button-primary Купить
+
+
+                    
+
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.new Новинка
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong.discount
+                      s 460 грн
+                      | 560 грн
+                    a(href="#").button.button-primary Купить
+
+
+
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.new Новинка
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong.discount
+                      s 460 грн
+                      | 560 грн
+                    a(href="#").button.button-primary Купить
+
+
+
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.new Новинка
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong.discount
+                      s 460 грн
+                      | 560 грн
+                    a(href="#").button.button-primary Купить
+
+            
+          .swiper-news-next.swiper-button-next
+            i.icon-arrow-right
+          .swiper-news-prev.swiper-button-prev
+            i.icon-arrow-left
+
+        
+    section.home-product(style="order: 2")
+      .container
+        h2 Просмотренные товары
+        .slider
+          .swiper-container.swiper-shares
+            .swiper-wrapper
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.top топ продаж
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong 560 грн
+                    a(href="#").button.button-primary Купить
+              
+
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.stock Акция
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong.discount
+                      s 460 грн
+                      | 560 грн
+                    a(href="#").button.button-primary Купить
+
+
+
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.new Новинка
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong.discount
+                      s 460 грн
+                      | 560 грн
+                    a(href="#").button.button-primary Купить
+
+
+
+
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.new Новинка
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong.discount
+                      s 460 грн
+                      | 560 грн
+                    a(href="#").button.button-primary Купить
+
+
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.new Новинка
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong.discount
+                      s 460 грн
+                      | 560 грн
+                    a(href="#").button.button-primary Купить
+
+
+                    
+
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.new Новинка
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong.discount
+                      s 460 грн
+                      | 560 грн
+                    a(href="#").button.button-primary Купить
+
+
+
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.new Новинка
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong.discount
+                      s 460 грн
+                      | 560 грн
+                    a(href="#").button.button-primary Купить
+
+
+
+              .swiper-slide
+                .product-card
+                  .product-card__img
+                    img(src="img/product/product.jpg", alt="")
+                  .product-card__info
+                    p.new Новинка
+                    .product-card__info__btn
+                      label.btn-heart
+                        input(type="checkbox")
+                        div
+                          i.icon-heart-transparent
+                          i.icon-heart
+                      a(href="#")
+                        i.icon-play-button
+                  .product-card__description
+                    h4 Постельное белье “Звезды”
+                    span Размер: 1.5м*2.0м
+                    div
+                      ul.star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star
+                        li
+                          i.icon-star-transparent
+                      b 23 отзыва
+                    strong.discount
+                      s 460 грн
+                      | 560 грн
+                    a(href="#").button.button-primary Купить
+
+            
+          .swiper-shares-next.swiper-button-next
+            i.icon-arrow-right
+          .swiper-shares-prev.swiper-button-prev
+            i.icon-arrow-left
+
+    .product__text.hidden-xs(style="order: 2")
+      .container
+        .row
+          .col-lg-6
+            p Мы с радостью принимаем и обслуживаем заказы 7 дней в неделю с 9.00 до 18.00 времени в телефонном режиме и круглосуточно в любом из доступных мессенджеров (Viber, Telegram). Доставка постели возможна по всей Украине почтовыми сервисами. 
+              span Сделайте заказ через сайт и мы Вам перезвоним для согласования подробностей заказа, способа оплаты и доставки товара. #тиротекc ком юа
+            strong Качество постельных комплектов Тиротекс
+            p Молдавское постельное бельё участвовало в конкурсе "Лучшее постельное белье на рынке Украины". Химический анализ показал, что продукция Тиротекса (она же "Тиратекс") находится на высочайшем уровне и является лучшей из предлагаемого бязевого белья. В результате тираспольское белье получает "Знак качества" от телеканала Интер. Программа является независимой и не сотрудничает с производителями.
+          .col-lg-6
+            p Для детей также имеется богатый выбор. Постельное белье для малышей предоставлено в каталоге магазина в виде готовых комплектов в формате 110х140 см, рассчитанных на детское одеяло. Для более старших есть полуторные наборы ярких расцветок, и при этом следует отметить, что стремление окружить своего ребенка натуральной продукцией, обладающей высокой экологичностью – это та задача, которая легко решают родители с помощью компании Тиратекс.
+            strong Преимущества постельного белья TIROTEX
+            p  Молдавское постельное белье, приобретаемое у нас, отмечено многими положительными отзывами покупателей. Кроме того, оно заслуженно обладает Знаком Качества от телеканала Интер и отличается следующими особенностями:
+            p
+              span натуральность основных компонентов;
+              span прочность и долговечность;
+
+
+
+
+  block footer
+    include partials/_footer
+  block pop-up
+    include partials/_pop-up
