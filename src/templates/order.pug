@@ -1,0 +1,148 @@
+---
+title: Order
+---
+extends layouts/_layout
+block content
+  block header
+    include partials/_header
+  
+
+
+  .order
+    .container
+      .order__content
+        h1 оформление заказа
+        .row
+          .col-lg-5
+            form.order__form
+              .order__step.active
+                h3
+                  b 
+                    div 1.
+                    i.icon-check
+                  | Данныe клиента
+                .order__step__dropdown
+                  span Ваше имя*:
+                  input(type="text" name="order-name" required)
+                  span Фамилия*
+                  input(type="text" name="order-surname" required)
+                  span Телефон*:
+                  input(type="tel" name="order-phone" required)
+                  a(href="#").button.button-secondary.next Далее
+              .order__step
+                h3
+                  b 
+                    div 2.
+                    i.icon-check
+                  | Варианты доставки
+                .order__step__dropdown(style="display: none")
+                  .order__step__radio
+                    label
+                      input(type="radio" name="delivery" checked)
+                      p Новая почта
+                    label
+                      input(type="radio" name="delivery")
+                      p Укр почта
+                    label
+                      input(type="radio" name="delivery")
+                      p Курьер Новой почты
+                    label
+                      input(type="radio" name="delivery")
+                      p Курьер Укр почты
+                    label
+                      input(type="radio" name="delivery")
+                      p Курьер Tirotex по Одессе
+                  span Город*
+                  input(type="text" name="order-sity" required)
+                  span Выберите отделение:
+                  input(type="text")
+                  a(href="#").button.button-secondary.next Далее
+              .order__step
+                h3
+                  b 
+                    div 3.
+                    i.icon-check
+                  | Варианты доставки
+                .order__step__dropdown(style="display: none")
+                  .order__step__radio
+                    label
+                      input(type="radio" name="payment")
+                      p Оплата при получении
+                    label
+                      input(type="radio" name="payment" checked)
+                      p Перевод на карту
+                  strong 
+                    i.icon-warning
+                    | Не оплачивайте пожалуйста заказ до подтверждения менеджером!
+                  span Комментарий к заказу
+                  textarea
+                  a(href="#success" rel="modal:open").button.button-secondary оформить заказ
+
+          .col-lg-7
+            .order__basket
+              .order__basket__header
+                h3 Ваш заказ
+              .order__basket__body
+                .order__basket__item
+                  .order__basket__item__img
+                    img(src="img/home/intro-img-1.jpg", alt="")
+                  .order__basket__item__info
+                    h2 Постельный комплект Butterfly (Батерфлай) если длинное название 
+                    strong 460 грн
+                    b Размер: 1.5м*2.0м
+                    b Цвет: небесно-голубой
+                    .order__basket__item__counter
+                      button
+                        i.icon-minus
+                      input(type="number" value="1" readonly)
+                      button
+                        i.icon-plus
+                .order__basket__item
+                  .order__basket__item__img
+                    img(src="img/home/intro-img-1.jpg", alt="")
+                  .order__basket__item__info
+                    h2 Постельный комплект Butterfly (Батерфлай) если длинное название 
+                    strong 460 грн
+                    b Размер: 1.5м*2.0м
+                    b Цвет: небесно-голубой
+                    .order__basket__item__counter
+                      button
+                        i.icon-minus
+                      input(type="number" value="1" readonly)
+                      button
+                        i.icon-plus
+                .order__basket__item
+                  .order__basket__item__img
+                    img(src="img/home/intro-img-1.jpg", alt="")
+                  .order__basket__item__info
+                    h2 Постельный комплект Butterfly (Батерфлай) если длинное название 
+                    strong 460 грн
+                    b Размер: 1.5м*2.0м
+                    b Цвет: небесно-голубой
+                    .order__basket__item__counter
+                      button
+                        i.icon-minus
+                      input(type="number" value="1" readonly)
+                      button
+                        i.icon-plus
+              .order__basket__footer
+                .order__basket__footer__sum
+                  ul
+                    li Скидка:
+                    li -40грн
+                  ul
+                    li Итого:
+                    li 460 грн
+                .order__basket__footer__btn
+                  a(href="#").order__basket__close Редактировать заказ
+
+    
+
+
+
+
+
+  block footer
+    include partials/_footer
+  block pop-up
+    include partials/_pop-up

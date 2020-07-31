@@ -26,3 +26,13 @@ if($(window).width() < 767) {
 
 
 
+
+
+//order
+$('.order__step__dropdown .next').on('click', function(event) {
+  event.preventDefault();
+  $(this).parents('.order__step').addClass('check').removeClass('active');
+  $(this).parents('.order__step__dropdown').slideUp();
+  $(this).parents('.order__step').next().find('.order__step__dropdown').slideDown();
+  $(this).parents('.order__step').next().addClass('active');
+});

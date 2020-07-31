@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>About</title>
+    <title>Order</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -298,28 +298,95 @@
         </div>
       </div>
       <!--END header-->
-      <div class="about">
+      <div class="order">
         <div class="container">
-          <ul class="breadcrumbs">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">О нас</a></li>
-          </ul>
-          <h1>О нас</h1>
-          <div class="about__row">
-            <div class="about__block">
-              <h3>О постели Tirotex</h3>
-              <div class="about__block__text">
-                <p>«Тиротекс» - это текстильная компания с 40-летней историей и годовым оборотом более 100 млн. долларов, работающая по полному циклу производства, начиная от обработки хлопка и заканчивая пошивом разнообразной швейной продукции.</p>
-                <p>Это уникальный производственный комплекс с мощной инфраструктурой, развитой технической, организационной и научной базой.</p>
-                <p>Предприятие ориентировано на внешний рынок сбыта. Объем экспортных поставок составляет около 70% от общего объема продаж.</p>
-                <p>Мы сотрудничаем с заказчиками из более чем 30 стран Европы и СНГ и имеем многолетний опыт работы с крупными компаниями Италии, Германии, Франции, Российской Федерации, Швеции, Финляндии, Америки, Чехии, стран бывшей Югославии и многих других.</p>
-                <p>«Тиротекс» - это текстильная компания с 40-летней историей и годовым оборотом более 100 млн. долларов, работающая по полному циклу производства, начиная от обработки хлопка и заканчивая пошивом разнообразной швейной продукции.</p>
-                <p>Это уникальный производственный комплекс с мощной инфраструктурой, развитой технической, организационной и научной базой.</p>
-                <p>Предприятие ориентировано на внешний рынок сбыта. Объем экспортных поставок составляет около 70% от общего объема продаж.</p>
-                <p>Мы сотрудничаем с заказчиками из более чем 30 стран Европы и СНГ и имеем многолетний опыт работы с крупными компаниями Италии, Германии, Франции, Российской Федерации, Швеции, Финляндии, Америки, Чехии, стран бывшей Югославии и многих других.</p>
+          <div class="order__content">
+            <h1>оформление заказа</h1>
+            <div class="row">
+              <div class="col-lg-5">
+                <form class="order__form">
+                  <div class="order__step active">
+                    <h3><b>
+                        <div>1.</div><i class="icon-check"></i>
+                      </b>Данныe клиента</h3>
+                    <div class="order__step__dropdown"><span>Ваше имя*:</span><input type="text" name="order-name" required><span>Фамилия*</span><input type="text" name="order-surname" required><span>Телефон*:</span><input type="tel" name="order-phone" required><a class="button button-secondary next" href="#">Далее</a></div>
+                  </div>
+                  <div class="order__step">
+                    <h3><b>
+                        <div>2.</div><i class="icon-check"></i>
+                      </b>Варианты доставки</h3>
+                    <div class="order__step__dropdown" style="display: none">
+                      <div class="order__step__radio"><label><input type="radio" name="delivery" checked>
+                          <p>Новая почта</p>
+                        </label><label><input type="radio" name="delivery">
+                          <p>Укр почта</p>
+                        </label><label><input type="radio" name="delivery">
+                          <p>Курьер Новой почты</p>
+                        </label><label><input type="radio" name="delivery">
+                          <p>Курьер Укр почты</p>
+                        </label><label><input type="radio" name="delivery">
+                          <p>Курьер Tirotex по Одессе</p>
+                        </label></div><span>Город*</span><input type="text" name="order-sity" required><span>Выберите отделение:</span><input type="text"><a class="button button-secondary next" href="#">Далее</a>
+                    </div>
+                  </div>
+                  <div class="order__step">
+                    <h3><b>
+                        <div>3.</div><i class="icon-check"></i>
+                      </b>Варианты доставки</h3>
+                    <div class="order__step__dropdown" style="display: none">
+                      <div class="order__step__radio"><label><input type="radio" name="payment">
+                          <p>Оплата при получении</p>
+                        </label><label><input type="radio" name="payment" checked>
+                          <p>Перевод на карту</p>
+                        </label></div><strong> <i class="icon-warning"></i>Не оплачивайте пожалуйста заказ до подтверждения менеджером!</strong><span>Комментарий к заказу</span><textarea></textarea><a class="button button-secondary" href="#success" rel="modal:open">оформить заказ</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-lg-7">
+                <div class="order__basket">
+                  <div class="order__basket__header">
+                    <h3>Ваш заказ</h3>
+                  </div>
+                  <div class="order__basket__body">
+                    <div class="order__basket__item">
+                      <div class="order__basket__item__img"><img src="img/home/intro-img-1.jpg" alt=""></div>
+                      <div class="order__basket__item__info">
+                        <h2>Постельный комплект Butterfly (Батерфлай) если длинное название </h2><strong>460 грн</strong><b>Размер: 1.5м*2.0м</b><b>Цвет: небесно-голубой</b>
+                        <div class="order__basket__item__counter"><button><i class="icon-minus"></i></button><input type="number" value="1" readonly><button><i class="icon-plus"></i></button></div>
+                      </div>
+                    </div>
+                    <div class="order__basket__item">
+                      <div class="order__basket__item__img"><img src="img/home/intro-img-1.jpg" alt=""></div>
+                      <div class="order__basket__item__info">
+                        <h2>Постельный комплект Butterfly (Батерфлай) если длинное название </h2><strong>460 грн</strong><b>Размер: 1.5м*2.0м</b><b>Цвет: небесно-голубой</b>
+                        <div class="order__basket__item__counter"><button><i class="icon-minus"></i></button><input type="number" value="1" readonly><button><i class="icon-plus"></i></button></div>
+                      </div>
+                    </div>
+                    <div class="order__basket__item">
+                      <div class="order__basket__item__img"><img src="img/home/intro-img-1.jpg" alt=""></div>
+                      <div class="order__basket__item__info">
+                        <h2>Постельный комплект Butterfly (Батерфлай) если длинное название </h2><strong>460 грн</strong><b>Размер: 1.5м*2.0м</b><b>Цвет: небесно-голубой</b>
+                        <div class="order__basket__item__counter"><button><i class="icon-minus"></i></button><input type="number" value="1" readonly><button><i class="icon-plus"></i></button></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order__basket__footer">
+                    <div class="order__basket__footer__sum">
+                      <ul>
+                        <li>Скидка:</li>
+                        <li>-40грн</li>
+                      </ul>
+                      <ul>
+                        <li>Итого:</li>
+                        <li>460 грн</li>
+                      </ul>
+                    </div>
+                    <div class="order__basket__footer__btn"><a class="order__basket__close" href="#">Редактировать заказ</a></div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="about__img"><img src="img/about.jpg" alt=""></div>
           </div>
         </div>
       </div>

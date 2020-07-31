@@ -1,0 +1,279 @@
+.order
+  padding: 50px 0 90px
+  +r(992)
+    padding: 45px 0 20px
+  &__content
+    border-radius: 10px
+    border: solid 3px #f4f3f5
+    padding: 30px 60px 110px 105px
+    +r(992)
+      padding: 0
+      border: none
+      border-radius: 0
+    h1
+      color: #333333
+      +Montserrat-18()
+      font-family: 'Montserrat'
+      text-align: center
+      text-transform: uppercase
+      margin-bottom: 50px
+      position: relative
+      left: -20px
+      +r(992)
+        margin-bottom: 40px
+        left: 0
+  &__step
+    // &__dropdown
+    //   display: none
+    &.active
+      h3 b 
+        background: $beige
+    &.check
+      h3 b 
+        background: #fff
+        border-color: $gren
+        div
+          display: none
+        i
+          display: block !important
+    &__radio
+      margin-bottom: 30px
+      input
+        display: none
+        &:checked + p:before
+          background: #383838
+      label
+        cursor: pointer
+        display: block
+        margin-bottom: 15px
+      p
+        color: #333333
+        +Montserrat-12()
+        padding-left: 20px
+        position: relative
+        display: block
+        &::before
+          content: ''
+          width: 15px
+          height: 15px
+          border: solid 1px $grey
+          position: absolute
+          left: 0
+          top: 0
+          border-radius: 50%
+          +tr
+          
+
+    h3
+      color: #333333
+      +Montserrat-18()
+      display: flex
+      align-items: center
+      text-transform: uppercase
+      font-weight: normal
+      margin-bottom: 30px
+      +r(767)
+        font-size: 16px
+        margin-bottom: 20px
+      b
+        width: 38px
+        height: 38px
+        background-color: #c4c4c4
+        border-radius: 50%
+        +center
+        margin-right: 15px
+        border: 2px solid transparent
+        div
+          font-weight: normal
+          color: #ffffff
+          +Montserrat-18()
+          padding-left: 5px
+      i
+        display: none
+        color: $gren
+    span
+      color: #333333
+      +Montserrat-12()
+      margin-bottom: 8px
+      display: block
+    input
+      width: 100%
+      margin-bottom: 15px
+    textarea
+      width: 100%
+      height: 120px
+      margin-bottom: 15px
+    strong
+      display: flex
+      align-items: center
+      color: $black
+      +Montserrat-12()
+      font-weight: normal
+      max-width: 270px
+      width: 100%
+      margin-bottom: 20px
+      i
+        margin-right: 10px
+        font-size: 20px
+        color: $beige
+
+    a, button
+      width: 100%
+      padding: 14px
+      margin-top: 15px
+      margin-bottom: 40px
+      +r(767)
+        margin-top: 0px
+
+
+
+
+  &__basket
+    max-width: 550px
+    position: relative
+    left: 100%
+    transform: translate(-100%)
+    width: 100%
+    background-color: #ffffff 
+    padding: 30px 20px 30px 
+    padding-right: 30px
+    border-radius: 10px
+    box-shadow: 0 0 10px 0 rgba(117, 117, 117, 0.15)
+    +r(992)
+      display: none
+    &__header
+      h3
+        color: $black
+        +Montserrat-18()
+        text-align: center
+        text-transform: uppercase
+        font-weight: normal
+        padding-bottom: 30px
+        border-bottom: 1px solid $light-gray
+        +r(767)
+          font-size: 18px
+          font-weight: 500
+    &__body
+      height: 320px
+      overflow-y: auto
+      padding-right: 8px
+      width: calc(100% + 15px)
+      +r(767)
+        height: 210px
+      &::-webkit-scrollbar
+        width: 4px
+    &__item
+      display: flex
+      align-items: flex-start
+      padding: 20px 0
+      border-bottom: 1px solid $light-gray
+      &:last-child
+        border-bottom: none
+      &__img
+        width: 140px
+        height: 140px
+        overflow: hidden
+        margin-right: 30px
+        +r(767)
+          width: 100px
+          height: 100%
+          margin-right: 10px
+        img
+          width: 100%
+          height: 100%
+          +object-fit(cover)
+      &__info
+        flex: 1
+        h2
+          color: $black
+          font-family: 'Montserrat'
+          +Montserrat-18()
+          margin-bottom: 15px
+          font-weight: normal
+          +r(767)
+            font-size: 14px
+            margin-bottom: 10px
+            text-transform: uppercase
+        strong
+          color: $black
+          +Montserrat-18()
+          font-weight: normal
+          display: block
+          margin-bottom: 15px
+          +r(767)
+            margin-bottom: 10px
+        b
+          font-size: 14px
+          font-weight: normal
+          color: $grey
+          margin-bottom: 5px
+          display: block
+          +r(767)
+            font-size: 12px
+            letter-spacing: 0.24px
+            line-height: 1.4
+      &__counter
+        margin-top: 20px
+        width: 123px
+        height: 30px
+        border-radius: 8px
+        border: solid 1px #cccccc
+        background-color: #f6f6f6
+        display: flex
+        overflow: hidden
+        +r(767)
+          margin-top: 15px
+        button, input
+          width: 42px
+          height: 100%
+        button
+          +center
+          background: none
+          font-size: 15px
+          line-height: 1
+          outline: none
+          i.icon-minus
+            font-size: 1.5px
+        input
+          border: none
+          border-left: solid 1px #cccccc
+          border-right: solid 1px #cccccc
+          border-radius: 0
+          padding: 0 5px
+          text-align: center
+          &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+            -webkit-appearance: none
+            margin: 0
+    &__footer
+      &__sum
+        padding: 15px 0
+        border-top: 1px solid $light-gray
+        border-bottom: 1px solid $light-gray
+        ul
+          display: flex
+          justify-content: space-between
+          &:first-child
+            margin-bottom: 10px
+            li
+              color: #1bbc82
+              +Montserrat-reg-14()
+              text-transform: uppercase
+          &:last-child
+            li
+              color: #333333
+              +Montserrat-18()
+              text-transform: uppercase
+      &__btn
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        padding-top: 30px
+        +r(767)
+          padding-top: 20px
+        .order__basket__close
+          color: #000000
+          +Montserrat-12()
+          border-bottom: 1px solid #000
+          &:hover
+            color: $beige
+            border-color: $beige

@@ -25,7 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+.icon-warning:before {
+  content: "\e918";
+}
 .icon-burger:before {
   content: "\e917";
 }
@@ -47,14 +49,12 @@
 }
 .icon-check:before {
   content: "\e905";
-  color: #fff;
 }
 .icon-close:before {
   content: "\e906";
 }
 .icon-fb:before {
   content: "\e907";
-  color: #fff;
 }
 .icon-heart-transparent:before {
   content: "\e908";
@@ -90,11 +90,9 @@
 }
 .icon-question:before {
   content: "\e910";
-  color: #999;
 }
 .icon-search:before {
   content: "\e911";
-  color: #fff;
 }
 .icon-star-transparent:before {
   content: "\e912";
@@ -106,7 +104,6 @@
 }
 .icon-telegram:before {
   content: "\e914";
-  color: #fff;
 }
 .icon-viber .path1:before {
   content: "\e915";
