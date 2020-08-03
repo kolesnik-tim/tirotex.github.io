@@ -20,24 +20,20 @@ $selectric-font-size:       12px !default;                                      
 }
 
 .selectric {
-  border: $selectric-border-width solid $selectric-main-color;
-  border-radius: $selectric-border-radius;
-  background: $selectric-bg-color;
   position: relative;
   overflow: hidden;
   transition: all 0.3s;
-
+  // width: 45px;
   .label {
     display: block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 0 $selectric-inner-height 0 $selectric-spacing;
-    font-size: $selectric-font-size;
-    line-height: $selectric-inner-height;
-    color: $selectric-text-color;
-    height: $selectric-inner-height;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.28px;
     user-select: none;
+    padding-right: 5px;
   }
 
   .button {
@@ -45,18 +41,11 @@ $selectric-font-size:       12px !default;                                      
     position: absolute;
     right: 0;
     top: 0;
-    width: $selectric-inner-height;
-    height: $selectric-inner-height;
-
-
-    &:after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-    }
+    padding: 0;
+    color: #000000;
+  }
+  i{
+    font-size:6px;
   }
 }
 
@@ -69,8 +58,9 @@ $selectric-font-size:       12px !default;                                      
 .selectric-open {
   z-index: 9999;
   
-  .selectric {
-    border-color: #0e52fd !important;
+  .selectric b{
+    transform: rotate(180deg);
+    top: 3px;
   }
 
   .selectric-items {
@@ -145,11 +135,10 @@ $selectric-font-size:       12px !default;                                      
   position: absolute;
   top: 100%;
   left: 0;
-  background: #fff;
-  border: 1px solid #d4d4d4;
+  background: #f9f9f9;
   z-index: -1;
-  box-shadow: 0 0 10px -6px;
   border-radius: 2px;
+  width: 46px !important;
 
   .selectric-scroll {
     height: 100%;
@@ -172,17 +161,13 @@ $selectric-font-size:       12px !default;                                      
 
   li {
     display: block;
-    padding: 10px;
+    padding: 5px 7px;
     color: #666;
     cursor: pointer;
     position: relative;
 
-    &.selected::before {
-      content: $icon-check;
-      position: absolute;
-      right: 5px;
-      color: #0e52fd;
-      font-family: "iconfont";
+    &.selected {
+      color: #d9a678;
 
     }
 
@@ -192,8 +177,7 @@ $selectric-font-size:       12px !default;                                      
     // }
 
     &:hover {
-      background: #D5D5D5;
-      color: #444;
+      color: #d9a678;
     }
   }
 

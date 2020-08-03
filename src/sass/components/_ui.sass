@@ -59,6 +59,43 @@ input, textarea
 
 
 
+
+//range
+.irs--sharp
+  position: relative
+  top: -18px
+  +r(992)
+    top: 8px
+    margin-bottom: 10px
+.irs--sharp .irs-bar
+  background: $beige
+  height: 1px
+.irs--sharp .irs-handle
+  width: 10px
+  height: 25px
+  border-radius: 30px
+  background-color: $beige
+  top: 19px
+  cursor: pointer
+  i
+    display: none !important
+.irs--sharp .irs-line
+  background: $grey
+  height: 1px
+.irs--sharp .irs-from, .irs--sharp .irs-to, .irs--sharp .irs-single
+  background: none
+  color: $black
+  font-size: 14px
+  top: 50px
+  +r(992)
+    top: -5px
+  &::before
+    display: none
+
+
+
+
+
 //fancybox
 .fancybox-close-small
   right: -45px

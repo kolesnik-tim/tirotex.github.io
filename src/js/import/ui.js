@@ -1,18 +1,12 @@
-// import '../lib/maskedinput.js';
-// import modal from 'jquery-modal';
-// import selectric from 'selectric';
+import rangeslider from 'ion-rangeslider';
+import selectric from 'selectric';
 
-//select
-// $('select').selectric();
+// select
+$('select').selectric({
+  arrowButtonMarkup: '<b class="button"><i class="icon-arrow-down"></i></b>',
+  disableOnMobile: false
+});
 
-
-// //pop-up
-// $('[rel="modal:open"]').on('click', function(event) {
-//   $(this).modal({
-//     fadeDuration: 200
-//   });
-//   return false;
-// });
 
 
 
@@ -58,4 +52,59 @@ $('.order__step__dropdown .next').on('click', function(event) {
 $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
   $(this).addClass('active').siblings().removeClass('active')
     .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+});
+
+
+// page search
+//dropdown
+$('.search__filters__block h3').on('click', function() {
+  if($(window).width() <= 767) {
+    $(this).toggleClass('active');
+    $(this).siblings('.search__filters__dropdown').slideToggle();
+  } else{
+    if($(this).parents('.search__filters__block').hasClass('search__filters__block--primary')) {
+      $(this).toggleClass('active');
+      $(this).siblings('.search__filters__dropdown').slideToggle();
+    }
+  }
+}); 
+
+$('.search__text strong').on('click', function() {
+  if($(window).width() <= 992) {
+    $(this).toggleClass('active');
+    $(this).siblings('.search__text__dropdown').slideToggle();
+  }
+});
+
+
+
+
+
+//range-slider
+$('.js-range-slider').ionRangeSlider({
+  type: 'double',
+  grid: false,
+  min_interval: 100,
+  hide_min_max: true,
+  skin: 'sharp'
+});
+
+
+//.filters-open
+$('.filters-open').on('click', function(event) {
+  event.preventDefault();
+  $('.search__filters').fadeIn();
+});
+$('.filters-close').on('click', function(event) {
+  event.preventDefault();
+  $('.search__filters').fadeOut();
+});
+
+$('.sorting-open').on('click', function(event) {
+  event.preventDefault();
+  $('.search__sorting').fadeIn();
+});
+$('.sorting-close').on('click', function(event) {
+  event.preventDefault();
+  $('.search__sorting').fadeOut();
 });

@@ -1,0 +1,525 @@
+.search
+  &__title
+    padding: 30px 0 45px
+    +r(767)
+      padding-bottom: 0
+    h1
+      color: $black
+      +Montserrat-24()
+      font-weight: normal
+      text-transform: uppercase
+      margin-bottom: 30px
+      text-align: center
+      font-family: 'Montserrat'
+      +r(767)
+        font-size: 18px
+        line-height: 0.89
+        letter-spacing: 0.54px
+        font-family: 'Balsamiq Sans'
+    p
+      color: $black
+      +Montserrat-reg-14()
+      +r(767)
+        display: none
+      b
+        font-weight: 500
+  &__btn
+    display: none
+    border: solid 1px #cccccc
+    margin-bottom: 10px
+    +r(992)
+      display: flex
+    +r(575)
+      width: calc(100% + 30px)
+      margin-left: -15px
+    a
+      width: 100%
+      color: $light-black
+      +Montserrat-reg-14()
+      +center
+      padding: 10px
+      text-transform: uppercase
+      &:first-child
+        border-right: solid 1px #cccccc
+  &__content
+    display: flex
+
+
+
+
+
+
+
+  &__filters
+    width: 280px
+    margin-right: 45px
+    +r(992)
+      display: none
+      position: fixed
+      background: #fff
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      overflow: auto
+      z-index: 10
+      padding: 30px 15px 100px
+    h2
+      font-family: 'Montserrat'
+      color: $black
+      +Montserrat-18()
+      font-weight: normal
+      text-transform: uppercase
+      border-bottom: 1px solid $grey
+      padding-bottom: 18px
+      position: relative
+      +r(992)
+        font-size: 24px
+        font-weight: 600
+        line-height: 1.3
+        letter-spacing: 0.48px
+        color: $black
+        padding-bottom: 30px
+        padding-right: 30px
+      a
+        display: none
+        +r(992)
+          display: block
+        i
+          font-size: 30px
+          position: absolute
+          right: 0
+          top: 0px
+          color: $black
+      span
+        &:nth-child(2)
+          display: none
+          +r(992)
+            display: block
+    &__btn
+      +r(992)
+        position: fixed
+        bottom: 0
+        left: 0
+        width: 100%
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15)
+        background-color: #ffffff
+        z-index: 3
+        padding: 18px 15px
+        display: flex
+      .button
+        +r(992)
+          width: 100%
+          padding: 12px 10px 10px
+          font-size: 14px
+        &-primary
+          margin-left: 15px
+      .button-secondary
+        width: 100%
+        padding: 19px
+        border-radius: 30px
+        letter-spacing: 1px
+        margin-top: 45px
+        +r(992)
+          display: none
+    &__block
+      border-bottom: 1px solid $grey
+      padding-top: 15px
+      +r(992)
+        padding-top: 20px
+      h3
+        color: $black
+        +Montserrat-reg-14()
+        font-weight: normal
+        padding-bottom: 15px
+        position: relative
+        cursor: pointer
+        +r(992) 
+          font-size: 18px
+          font-weight: 600
+          line-height: 1.3
+          color: $black
+          padding-bottom: 20px
+        &::before, &:after
+          content: ''
+          position: absolute
+          width: 20px
+          height: 1px
+          right: 0
+          top: 8px
+          background: $black
+          +tr
+        &::after
+          transform: rotate(-90deg)
+        &.active:after
+          transform: rotate(0deg)
+      &--secondary
+        padding-top: 45px
+        border-bottom: none
+        +r(992)
+          padding-top: 20px
+        h3
+          +Montserrat-18()
+          text-transform: uppercase
+          padding-bottom: 25px
+          +r(992)
+            padding-bottom: 20px
+          &::before, &:after
+            display: none
+            +r(992)
+              display: block
+    &__checkbox
+      label
+        display: flex
+        justify-content: space-between
+        padding-bottom: 15px
+        cursor: pointer
+      input
+        display: none
+        &:checked + div::before
+          background: $beige
+      span, b
+        color: $black
+        +Montserrat-reg-14()
+      b
+        font-size: 14px
+        font-weight: normal
+        color: #000000
+      span
+        display: inline-block
+        flex: 1
+        padding-right: 10px
+        +r(992)
+          font-size: 16px
+      div
+        display: flex
+        align-items: center
+        &::before
+          content: '\e905'
+          width: 25px
+          height: 25px
+          border-radius: 3px
+          border: solid 1px $beige
+          +center
+          color: #fff
+          font-family: 'icomoon'
+          font-size: 14px
+          +tr
+          margin-right: 15px
+      &--secondary
+        max-height: 440px
+        overflow: auto
+        padding-right: 15px
+        +r(992)
+          max-height: 100%
+          overflow: visible
+        &::-webkit-scrollbar
+          width: 4px
+        label
+          padding-bottom: 12px
+
+    &__colors
+      display: flex
+      flex-wrap: wrap
+      width: calc(100% + 10px)
+      label
+        width: 25px
+        height: 25px
+        border-radius: 3px
+        margin: 0 10px 10px 0
+        border: solid 1px #f6f6f6
+        +center
+        cursor: pointer
+        +r(992)
+          width: 40px
+          height: 40px
+        input
+          display: none
+          &:checked + i
+            color: #fff
+        &.black
+          input:checked + i
+            color: #999999
+        i
+          font-size: 12px
+          color: transparent
+          +tr
+  &__news 
+    margin-top: 45px
+    h3
+      color: $black
+      +Montserrat-18() 
+      text-transform: uppercase
+      font-weight: normal 
+      margin-bottom: 20px  
+    &__content
+      overflow: auto
+      max-height: 315px
+      padding-right: 5px
+      &::-webkit-scrollbar
+        width: 4px
+    &__items
+      padding: 10px 0
+      display: flex
+    &__btn
+      color: $black
+      +Montserrat-reg-14()
+      margin-top: 15px
+      display: block
+      &:hover
+        color: $beige
+    &__img
+      width: 83px
+      height: 83px
+      img
+        width: 100%
+        height: 100%
+        +object-fit(cover)
+    &__text
+      flex: 1
+      display: flex
+      flex-direction: column
+      margin-left: 15px
+      height: 100%
+      p
+        font-size: 12px
+        font-weight: normal
+        color: $black
+        padding-bottom: 10px
+        line-height: 1.3
+        text-align: justify
+        display: block
+        min-height: 65px
+      span
+        color: $black
+        +Montserrat-18()
+        display: block
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  &__product
+    flex: 1
+    &__content
+      padding-top: 15px
+      +r(992)
+        padding: 15px 8px 0
+      +r(374)
+        padding: 15px 0 0
+    .product-card
+      margin-bottom: 30px
+      +r(992)
+        width: calc( 100% + 14px)
+        margin-left: -7px
+    .page-buttons
+      margin-top: 20px
+      padding-top: 10px
+      padding-bottom: 70px
+      +r(992)
+        padding-bottom: 50px
+  &__sorting
+    display: flex
+    border-bottom: 1px solid $grey
+    padding-bottom: 20px
+    +r(992)
+      display: none
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: #fff
+      z-index: 10
+      padding: 30px 15px 100px
+      overflow: auto
+    .search__filters__btn
+      display: none
+      +r(992)
+        display: flex
+    p, span, strong
+      color: $black
+      +Montserrat-reg-14()
+      +tr
+      font-weight: normal
+    strong
+      margin-right: 10px
+      +r(992)
+        font-size: 18px
+        font-weight: 600
+        line-height: 1.3
+        display: block
+        text-transform: uppercase
+        padding: 20px 0
+      b
+        display: none
+        margin-left: 4px
+        font-weight: normal
+        +r(992)
+          display: inline-block
+          font-weight: 600
+    p
+      margin-right: 20px
+      position: relative
+      .sorting-close
+        display: none
+        +r(992)
+          display: block
+          position: absolute
+          top: 0
+          right: 0
+          font-size: 30px
+          color: $black
+      +r(992)
+        font-size: 24px
+        font-weight: 600
+        line-height: 1.3
+        letter-spacing: 0.48px
+        padding-bottom: 30px
+        text-transform: uppercase
+        border-bottom: 1px solid $grey
+        margin-right: 0
+      span
+        +r(992)
+          display: none
+    input
+      display: none
+      &:checked + span
+        border-color: $beige
+    label
+      padding: 0 15px
+      cursor: pointer
+      +r(992)
+        padding: 0
+    &__radio
+      display: flex
+      +r(992)
+        flex-direction: column
+      span
+        border-bottom: 1px solid transparent
+        +r(992)
+          border-bottom: 1px solid $grey
+          font-size: 18px
+          font-weight: 600
+          line-height: 1.3
+          display: block
+          text-transform: uppercase
+          padding: 20px 0
+    &__select
+      display: flex
+      margin-left: 15px
+      +r(992)
+        margin-left: 0
+        border-bottom: 1px solid $grey
+        justify-content: space-between
+        align-items: center
+      .selectric .label
+        padding-right: 15px
+
+
+  &__filters-check
+    padding-top: 10px
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    +r(767)
+      display: block
+    ul
+      display: flex
+      flex-wrap: wrap
+      flex: 1
+    li
+      margin-right: 8px
+      margin-bottom: 10px
+      &:last-child
+        display: none
+      +r(992)
+        margin-right: 5px
+        &:last-child
+          display: inline-block
+    li, p
+      padding: 7px 14px
+      border-radius: 10px
+      border: solid 1px $beige
+      display: inline-block
+      color: $black
+      +Montserrat-12()
+      font-weight: normal
+      +r(767)
+        padding: 7px 10px
+      i
+        font-size: 8px
+        color: $black
+        margin-left: 4px
+        position: relative
+        top: -4px
+        +tr
+      a:hover i 
+        color: $beige
+
+
+
+
+  &__text
+    padding: 0px 0 130px
+    +r(992)
+      background-color: $invalid-name
+      padding: 30px 0 20px
+      margin-bottom: 50px
+    p, strong
+      color: $light-black
+      +Montserrat-reg-14()
+      font-weight: normal
+      display: block
+    strong
+      text-transform: uppercase
+      margin: 40px 0 20px
+      color: $black
+      position: relative
+      padding-right: 30px
+      +r(992)
+        font-weight: 500
+        line-height: 1.5
+        color: $black
+        text-transform: none
+        margin: 0 0 20px
+        &::before, &:after
+          content: ''
+          position: absolute
+          width: 20px
+          height: 1px
+          right: 0
+          top: 8px
+          background: $black
+          +tr
+        &::after
+          transform: rotate(-90deg)
+        &.active:after
+          transform: rotate(0deg)
+    p
+      margin-bottom: 20px
+      span
+        display: block
+    &__dropdown
+      +r(992)
+        padding-bottom: 30px
+        display: none
+
