@@ -8,8 +8,9 @@ body
 .container
   box-sizing: border-box
   padding: 0 15px
-  +rmin(1230)
+  +rmin(1200)
     max-width: 1200px !important
+  +rmin(1230)
     padding: 0
 a
   text-decoration: none !important
@@ -274,6 +275,54 @@ input, textarea
         color: $beige
     
   
+
+//datepicker
+.datepicker
+  width: 300px
+  height: 300px
+  margin-left: -8px
+  border-radius: 10px
+  border: solid 1px #cccccc
+  padding: 25px 30px 30px
+  box-sizing: border-box
+.datepicker--cell-month
+  height: 15% !important
+  margin-top: 17px
+.datepicker--cell-year
+  height: 20% !important
+  margin-top: 20px
+.datepicker--nav
+  border-bottom: none
+  padding: 0
+.datepicker--content
+  padding: 0
+.datepicker--days-names 
+  margin-bottom: 11px
+.datepicker--cell
+  color: $black
+  +Montserrat-12()
+  height: 20px
+  border-radius: 45px
+  margin-bottom: 11px
+  font-family: 'Montserrat'
+  padding-bottom: 2px
+  &:hover
+    background-color: $beige !important
+    color: #fff !important
+.datepicker--cell.-selected-, .datepicker--cell.-selected-.-current-
+  background-color: $beige
+.datepicker--cell.-current-, .datepicker--cell.-current-.-in-range-
+  color: $beige
+.datepicker--day-name 
+  font-size: 12px
+  font-weight: 300
+  text-transform: none
+  font-stretch: normal
+  font-style: normal
+  line-height: 1.83
+  letter-spacing: normal
+  color: rgba(0, 0, 0, 0.9)
+  font-family: 'Montserrat'
 
 
 

@@ -1,0 +1,481 @@
+---
+title: Cabinet
+---
+extends layouts/_layout
+block content
+  block header
+    include partials/_header
+  
+  
+  .cabinet
+    .container
+      ul.breadcrumbs
+        li
+          a(href="#") Главная
+        li
+          a(href="#") Личный кабинет
+      h1 Личный кабинет
+        a(href="#") Выход
+      .tabs
+        ul.tabs__caption
+          li.active Контактная информация
+          li Данные доставки
+          li Избранное
+          li История заказов
+          li Возрат товара
+        a(href="#").cabinet__exit Выход
+        button.cabinet__mobile-btn Контактная информация
+        .tabs__content.active
+          form.cabinet__info
+            .row
+              .col-lg-4
+                h2 Редактирование личных данных
+                .cabinet__input
+                  span Ваше имя*
+                  input(type="password" name="name" required)
+                .cabinet__input
+                  span Фамилия*
+                  input(type="text" name="surname" required)
+                .cabinet__input
+                  span Телефон*:
+                  input(type="tel" name="phone" required)
+              .col-lg-4
+                h2.hidden-xs.hidden-sm
+                .cabinet__input
+                  span Дата рождения
+                  input(type="text" name="data" data-position='bottom right').datepicker-birth
+                  a(href="#").calendar-open
+                    i.icon-calendar
+                .cabinet__input
+                  span E-mail*
+                  input(type="email" name="email" required)
+                .cabinet__checkbox
+                  label
+                    input(type="checkbox" checked)
+                    span Уведомленить о новинках, скидках, акциях
+              .col-lg-4
+                h2 Изменение пароля
+                .cabinet__input
+                  span Старый пароль*
+                  input(type="password" name="password-old" required)
+                .cabinet__input
+                  span Новый пароль*
+                  input(type="password" name="password-new" required)
+                .cabinet__input
+                  span Подтверждение пароля*
+                  input(type="password" name="password-check" required)
+                .cabinet__submit
+                  button(type="submit").button.button-secondary Сохранить
+        button.cabinet__mobile-btn Данные доставки
+        .tabs__content
+          form.cabinet__delivery
+            .row
+              .col-lg-4
+                h2 История 
+                  // span Список пока пустой
+                .cabinet__radio.cabinet__radio--history
+                  label
+                    input(type="radio" name="history")
+                    b Имя фамилия
+                    ul
+                      li ул. Преображенская, д. 12, кв. 23
+                      li г. Одесса, Одесская область.
+                      li индекс: 90400
+                      li тел. 099-300-00-00
+                .cabinet__radio.cabinet__radio--history
+                  label
+                    input(type="radio" name="history")
+                    b Имя фамилия
+                    ul
+                      li ул. Преображенская, д. 12, кв. 23
+                      li г. Одесса, Одесская область.
+                      li индекс: 90400
+                      li тел. 099-300-00-00
+              .col-lg-4
+                h2 Добавить новые данные получателя
+                .cabinet__input
+                  span Ваше имя*
+                  input(type="password" name="name" required)
+                .cabinet__input
+                  span Фамилия*
+                  input(type="text" name="surname" required)
+                .cabinet__input
+                  span Телефон*:
+                  input(type="tel" name="phone" required)
+              .col-lg-4
+                .cabinet__delivery-options
+                  h2 Варианты доставки
+                  .cabinet__radio-block
+                    .cabinet__radio
+                      label
+                        input(type="radio" name="delivery")
+                        b Новая почта
+                    .cabinet__radio
+                      label
+                        input(type="radio" name="delivery" checked)
+                        b Укр почта
+                    .cabinet__radio
+                      label
+                        input(type="radio" name="delivery")
+                        b Курьер Новой почты
+                    .cabinet__radio
+                      label
+                        input(type="radio" name="delivery")
+                        b Курьер Укр почты
+                    .cabinet__radio
+                      label
+                        input(type="radio" name="delivery")
+                        b Курьер Tirotex по Одессе
+                .cabinet__input
+                  span Город*
+                  input(type="text" name="sity" required)
+                .cabinet__input.cabinet__input__mobile
+                  span Выберите отделение:
+                  input(type="text" name="branch")
+                .cabinet__input.hidden-xs.hidden-sm
+                  span Улица*
+                  input(type="text" name="street" required)
+                .row.cabinet__no-indent.hidden-xs.hidden-sm
+                  .col-lg-4
+                    .cabinet__input
+                      span Дом*
+                      input(type="number" name="phone" required)
+                  .col-lg-4
+                    .cabinet__input
+                      span Квартира*
+                      input(type="number" name="flat" required)
+                  .col-lg-4
+                    .cabinet__input
+                      span Индекс*
+                      input(type="number" name="index" required)
+                .cabinet__submit
+                  button(type="submit").button.button-secondary Сохранить
+        button.cabinet__mobile-btn Избранное
+        .tabs__content
+          .cabinet__favorites
+            h5.hidden-xs.hidden-sm 3 товара
+            .cabinet__favorites__content
+              .cabinet__favorites__item
+                .cabinet__favorites__img
+                  img(src="img/product/product.jpg", alt="")
+                .cabinet__favorites__info
+                  h4 
+                    a(href="#") Постельный комплект Butterfly (Батерфлай) если длинное название 
+                  span Размер: 1.5м*2.0м
+                  span Цвет: небесно-голубой
+                  .cabinet__favorites__row
+                    ul.star
+                      li
+                        i.icon-star
+                      li
+                        i.icon-star
+                      li
+                        i.icon-star
+                      li
+                        i.icon-star
+                      li
+                        i.icon-star-transparent
+                    b 23 отзыва
+                  .cabinet__favorites__price
+                    strong.red 
+                      s 460 грн
+                      | 460 грн
+                    b.red Есть в наличии
+                  .cabinet__favorites__btn
+                    a(href="#").button.button-secondary Купить
+                    a(href="#").cabinet__favorites__items-delete Удалить
+              .cabinet__favorites__item
+                .cabinet__favorites__img
+                  img(src="img/product/product.jpg", alt="")
+                .cabinet__favorites__info
+                  h4 
+                    a(href="#") Постельный комплект Butterfly (Батерфлай) если длинное название 
+                  span Размер: 1.5м*2.0м
+                  span Цвет: небесно-голубой
+                  .cabinet__favorites__row
+                    ul.star
+                      li
+                        i.icon-star
+                      li
+                        i.icon-star
+                      li
+                        i.icon-star
+                      li
+                        i.icon-star
+                      li
+                        i.icon-star-transparent
+                    b 23 отзыва
+                  .cabinet__favorites__price
+                    strong.red 
+                      s 460 грн
+                      | 460 грн
+                    b.red Есть в наличии
+                  .cabinet__favorites__btn
+                    a(href="#").button.button-secondary Купить
+                    a(href="#").cabinet__favorites__items-delete Удалить
+              .cabinet__favorites__item
+                .cabinet__favorites__img
+                  img(src="img/product/product.jpg", alt="")
+                .cabinet__favorites__info
+                  h4 
+                    a(href="#") Постельный комплект Butterfly (Батерфлай) если длинное название 
+                  span Размер: 1.5м*2.0м
+                  span Цвет: небесно-голубой
+                  .cabinet__favorites__row
+                    ul.star
+                      li
+                        i.icon-star
+                      li
+                        i.icon-star
+                      li
+                        i.icon-star
+                      li
+                        i.icon-star
+                      li
+                        i.icon-star-transparent
+                    b 23 отзыва
+                  .cabinet__favorites__price
+                    strong.red 
+                      s 460 грн
+                      | 460 грн
+                    b.red Есть в наличии
+                  .cabinet__favorites__btn
+                    a(href="#").button.button-secondary Купить
+                    a(href="#").cabinet__favorites__items-delete Удалить
+        button.cabinet__mobile-btn История заказов
+        .tabs__content
+          .cabinet__history
+            h2.hidden-xs.hidden-sm Ваши заказы
+            .cabinet__history__content
+              .cabinet__history__block
+                .cabinet__history__title
+                  p Заказ №4545
+                    i |
+                  span 10.12.2020 20:33
+                  span ТТН 203020403949
+                .cabinet__favorites__item
+                  .cabinet__favorites__img
+                    img(src="img/product/product.jpg", alt="")
+                  .cabinet__favorites__info
+                    div
+                      h4 
+                        a(href="#") Постельный комплект Butterfly (Батерфлай) если длинное название 
+                      span Размер: 1.5м*2.0м
+                      span Цвет: небесно-голубой
+                      .cabinet__favorites__row
+                        ul.star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star-transparent
+                        b 23 отзыва
+                    .cabinet__favorites__btn
+                      strong 1 шт
+                      b 460 грн
+                .cabinet__favorites__item
+                  .cabinet__favorites__img
+                    img(src="img/product/product.jpg", alt="")
+                  .cabinet__favorites__info
+                    div
+                      h4 
+                        a(href="#") Постельный комплект Butterfly (Батерфлай) если длинное название 
+                      span Размер: 1.5м*2.0м
+                      span Цвет: небесно-голубой
+                      .cabinet__favorites__row
+                        ul.star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star-transparent
+                        b 23 отзыва
+                    .cabinet__favorites__btn
+                      strong 1 шт
+                      b 460 грн
+                .cabinet__favorites__item
+                  .cabinet__favorites__img
+                    img(src="img/product/product.jpg", alt="")
+                  .cabinet__favorites__info
+                    div
+                      h4 
+                        a(href="#") Постельный комплект Butterfly (Батерфлай) если длинное название 
+                      span Размер: 1.5м*2.0м
+                      span Цвет: небесно-голубой
+                      .cabinet__favorites__row
+                        ul.star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star-transparent
+                        b 23 отзыва
+                    .cabinet__favorites__btn
+                      strong 1 шт
+                      b 460 грн
+                .cabinet__history__footer
+                  ul
+                    li 
+                      span Скидка:
+                    li
+                      span -40грн
+                  ul
+                    li 
+                      b Всего:
+                    li
+                      b.hidden-xs.hidden-sm 3 шт
+                      b 1380 грн     
+              .cabinet__history__block
+                .cabinet__history__title
+                  p Заказ №4545
+                    i |
+                  span 10.12.2020 20:33
+                  span ТТН 203020403949
+                .cabinet__favorites__item
+                  .cabinet__favorites__img
+                    img(src="img/product/product.jpg", alt="")
+                  .cabinet__favorites__info
+                    div
+                      h4 
+                        a(href="#") Постельный комплект Butterfly (Батерфлай) если длинное название 
+                      span Размер: 1.5м*2.0м
+                      span Цвет: небесно-голубой
+                      .cabinet__favorites__row
+                        ul.star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star-transparent
+                        b 23 отзыва
+                    .cabinet__favorites__btn
+                      strong 1 шт
+                      b 460 грн
+                .cabinet__favorites__item
+                  .cabinet__favorites__img
+                    img(src="img/product/product.jpg", alt="")
+                  .cabinet__favorites__info
+                    div
+                      h4 
+                        a(href="#") Постельный комплект Butterfly (Батерфлай) если длинное название 
+                      span Размер: 1.5м*2.0м
+                      span Цвет: небесно-голубой
+                      .cabinet__favorites__row
+                        ul.star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star-transparent
+                        b 23 отзыва
+                    .cabinet__favorites__btn
+                      strong 1 шт
+                      b 460 грн
+                .cabinet__favorites__item
+                  .cabinet__favorites__img
+                    img(src="img/product/product.jpg", alt="")
+                  .cabinet__favorites__info
+                    div
+                      h4 
+                        a(href="#") Постельный комплект Butterfly (Батерфлай) если длинное название 
+                      span Размер: 1.5м*2.0м
+                      span Цвет: небесно-голубой
+                      .cabinet__favorites__row
+                        ul.star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star
+                          li
+                            i.icon-star-transparent
+                        b 23 отзыва
+                    .cabinet__favorites__btn
+                      strong 1 шт
+                      b 460 грн
+                .cabinet__history__footer
+                  ul
+                    li 
+                      span Скидка:
+                    li
+                      span -40грн
+                  ul
+                    li 
+                      b Всего:
+                    li
+                      b.hidden-xs.hidden-sm 3 шт
+                      b 1380 грн     
+
+        button.cabinet__mobile-btn Возрат товара
+        .tabs__content 
+          form.cabinet__return
+            h2 Информация о заказе
+            .cabinet__input
+              span Ваше имя*
+              input(type="password" name="name" required)
+            .cabinet__input
+              span Фамилия*
+              input(type="text" name="surname" required)
+            .cabinet__input
+              span Телефон*:
+              input(type="tel" name="phone" required)
+            .cabinet__input
+              span Номер накладной:
+              input(type="number")
+            .cabinet__input
+              span Номер заказа:
+              input(type="number")
+            .cabinet__radio
+              span Причина*:
+              label
+                input(type="radio" name="cause")
+                b Не тот товар (ошибочный)
+            .cabinet__radio
+              label
+                input(type="radio" name="cause")
+                b Брак
+            .cabinet__radio
+              label
+                input(type="radio" name="cause" checked)
+                b Другое
+            .cabinet__input.cabinet__input--textarea
+              span Описание:
+              textarea
+            .cabinet__submit
+              button(type="submit").button.button-secondary Отправить
+
+
+
+
+  block footer
+    include partials/_footer
+  block pop-up
+    include partials/_pop-up

@@ -1,5 +1,17 @@
 import rangeslider from 'ion-rangeslider';
 import selectric from 'selectric';
+import datepicker from 'air-datepicker';
+
+
+
+//datepicker
+var myDatepicker = $('.datepicker-birth').datepicker({
+  showEvent: '',
+}).data('datepicker');
+$('.calendar-open').on('click',function(event) {
+  event.preventDefault();
+  myDatepicker.show();
+});
 
 // select
 $('select').selectric({
@@ -107,4 +119,15 @@ $('.sorting-open').on('click', function(event) {
 $('.sorting-close').on('click', function(event) {
   event.preventDefault();
   $('.search__sorting').fadeOut();
+});
+
+
+
+
+
+//
+
+$('.cabinet__mobile-btn').on('click', function() {
+  $(this).toggleClass('active');
+  $(this).next().slideToggle();
 });

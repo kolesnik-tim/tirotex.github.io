@@ -1,0 +1,533 @@
+.cabinet
+  padding-bottom: 90px
+  +r(992)
+    padding-bottom: 50px
+  h1
+    color: #333333
+    +Montserrat-18()
+    display: flex
+    justify-content: center
+    padding: 30px 0 5px
+    text-align: center
+    text-transform: uppercase
+    font-weight: normal
+    font-family: 'Montserrat'
+    +r(992)
+      justify-content: space-between
+      border-bottom: 1px solid #cccccc
+      padding: 30px 0px 35px
+      text-transform: none
+      align-items: flex-end
+      width: 100%
+    +r(575)
+      width: calc(100% + 30px)
+      margin-left: -15px
+      padding: 30px 15px 35px
+    a
+      display: none
+      font-size: 12px
+      font-weight: normal
+      line-height: 1.4
+      letter-spacing: 0.24px
+      color: #333333
+      text-transform: none
+      +r(992) 
+        display: block
+  &__exit
+    position: absolute
+    right: 25px
+    top: 43px
+    color: #333333
+    +Montserrat-reg-14()
+    display: block
+    +r(992)
+      display: none
+    &:hover
+      color: $beige
+  &__mobile-btn
+    display: none
+    font-size: 16px
+    font-weight: normal
+    line-height: 1.4
+    letter-spacing: 0.32px
+    color: #333333
+    padding: 20px 0px
+    margin-top: -1px
+    background: none
+    text-align: left
+    border-bottom: 1px solid #cccccc
+    border-top: 1px solid #cccccc
+    position: relative
+    width: 100%
+    +r(992)
+      display: block
+    +r(575)
+      width: calc(100% + 30px)
+      margin-left: -15px
+      padding: 20px 15px
+    &:hover, &:active
+      outline: none
+    &:before, &:after
+      content: ''
+      width: 20px
+      height: 1px
+      background: #000
+      position: absolute
+      right: 0px
+      top: 50%
+      transform: translate(0, -50%)
+      +tr
+      +r(575)
+        right: 15px
+    &:after
+      transform: translate(0, -50%) rotate(-90deg)
+    &.active
+      &:after
+        transform: translate(0, -50%) rotate(0deg)
+
+  .tabs
+    border-radius: 10px
+    border: solid 3px #f4f3f5
+    padding: 35px
+    position: relative
+    width: calc(100% + 74px)
+    margin-left: -37px
+    +r(1300)
+      width: 100%
+      margin-left: 0
+    +r(992)
+      border: none
+      padding: 0
+    &__caption
+      display: flex
+      border-bottom: 1px solid $light-gray
+      +r(992)
+        display: none
+      li
+        color: #333333
+        +Montserrat-reg-14()
+        padding: 10px 0
+        margin-right: 65px
+        cursor: pointer
+        line-height: 1
+        border-bottom: 1px solid transparent
+        +tr
+        +r(1200)
+          margin-right: 35px
+        &.active
+          border-bottom-color: #000
+    &__content
+      display: none
+      padding-top: 30px
+      +r(992)
+        padding: 20px 0
+      &.active
+        display: block
+        +r(992)
+          display: none
+  input, textarea
+    width: 100%
+  h2
+    color: #333333
+    +Montserrat-reg-14()
+    text-transform: uppercase
+    font-weight: normal
+    font-family: 'Montserrat'
+    margin-bottom: 30px
+    min-height: 20px
+    +r(1200)
+      min-height: 40px
+    +r(992)
+      text-transform: none
+      min-height: auto
+      margin-bottom: 20px
+    span
+      color: #333333
+      +Montserrat-12()
+      text-transform: none
+  &__no-indent
+    padding: 0 8px
+    .col-lg-4
+      padding: 0 8px
+  &__submit
+    padding-top: 25px
+    +r(992)
+      padding-top: 15px
+    button
+      width: 100%
+      padding: 14px
+  &__input
+    margin-bottom: 15px
+    position: relative
+    span
+      color: #333333
+      +Montserrat-12()
+      margin-bottom: 8px
+      display: block
+      line-height: 1
+    textarea
+      height: 70px
+    &--textarea
+      margin-top: 18px
+    &--mobile
+      display: none
+      +r(992) 
+        display: block
+    .calendar-open
+      position: absolute
+      top: 25px
+      right: 12px
+      font-size: 22px
+  &__checkbox
+    margin-bottom: 30px
+    input
+      display: none
+      &:checked + span::before
+        color: $black
+    span
+      color: #333333
+      +Montserrat-12()
+      position: relative
+      display: flex
+      align-items: center
+      &::before
+        content: '\e905'
+        font-family: 'icomoon'
+        width: 20px
+        height: 20px
+        border-radius: 3px
+        border: 1px solid $black
+        color: transparent
+        +center
+        display: inline-flex
+        font-size: 13px
+        margin-right: 8px
+  &__radio-block
+    margin-bottom: 10px
+  &__delivery-options
+    +r(992)
+      margin-top: 20px
+  &__radio
+    span
+      color: #333333
+      +Montserrat-12()
+      margin-bottom: 13px
+      display: block
+      line-height: 1
+      margin-top: 30px
+    label
+      cursor: pointer
+      input
+        display: none
+        &:checked + b:before
+          background: $black
+      b
+        color: #333333
+        +Montserrat-12()
+        font-weight: normal
+        position: relative
+        +center-y
+        margin-bottom: 13px
+        &::before
+          content: ''
+          width: 15px
+          height: 15px
+          border: solid 1px $grey
+          margin-right: 8px
+          display: inline-block
+          border-radius: 50%
+          +tr
+      ul
+        margin-bottom: 30px
+      li
+        color: #333333
+        +Montserrat-12()
+    &--history
+      b
+        text-transform: uppercase
+  
+
+  &__return
+    max-width: 415px
+    width: 100%
+    padding-top: 35px
+    +relative-x
+    +r(992)
+      padding-top: 0
+    h2
+      font-size: 18px
+      +r(992)
+        font-size: 14px
+    .cabinet__submit
+      padding-top: 10px
+
+
+  &__favorites
+    max-width: 995px
+    width: 100%
+    +relative-x
+    h5
+      color: #333333
+      +Montserrat-reg-14()
+      font-weight: normal
+      text-align: right
+      border-bottom: 1px solid $light-gray
+      padding: 7px 0
+      margin-bottom: 10px
+    &__content
+      max-height: 740px
+      overflow: auto
+      padding-right: 15px
+      width: calc( 100% + 15px )
+      +r(992)
+        max-height: 100%
+      &::-webkit-scrollbar
+        width: 4px
+    &__item
+      padding: 18px 0
+      display: flex
+      border-bottom: 1px solid $light-gray
+      +r(992)
+        padding: 20px 0 15px
+        &:last-child
+          border-bottom: none
+    &__row
+      display: flex
+      margin-bottom: 12px
+      +r(992)
+        justify-content: space-between
+      b
+        font-size: 14px
+        font-weight: normal
+        color: $grey
+        margin-left: 30px
+        margin-top: -2px
+        +r(992)
+          font-size: 12px
+    &__img
+      width: 122px
+      height: 122px
+      background-color: #c4c4c4
+      overflow: hidden
+      margin-right: 30px
+      +r(992)
+        width: 73px
+        height: 73px
+        margin-right: 10px
+      img
+        width: 100%
+        height: 100%
+        +object-fit(cover)
+    &__info
+      flex: 1
+      padding-right: 200px
+      position: relative
+      +r(992)
+        padding-right: 0
+      h4
+        color: $black
+        +Montserrat-18()
+        font-weight: normal
+        margin-bottom: 8px
+        +r(992)
+          font-size: 14px
+        a
+          color: $black
+      span
+        font-size: 14px
+        font-weight: normal
+        color: $grey
+        margin-bottom: 5px
+        display: block
+        +r(992)
+          font-size: 12px
+    &__price
+      display: flex
+      align-items: center
+      +r(992)
+        flex-direction: row-reverse
+        justify-content: space-between
+        margin-bottom: 35px
+      strong, s
+        color: $black
+        +Montserrat-18()
+        font-weight: normal
+        +r(992)
+          font-size: 16px
+        &.red
+          color: $red
+      strong
+        +r(992)
+          display: flex
+          flex-wrap: wrap
+          justify-content: flex-end
+          align-items: center
+          flex: 1
+      s
+        font-size: 14px
+        margin-right: 10px
+        +r(992)
+          font-size: 12px
+      b
+        color: #1bbc82
+        +Montserrat-reg-14()
+        font-weight: normal
+        margin-left: 35px
+        +r(992)
+          margin-left: 0
+          font-size: 12px
+
+        &.red
+          color: $red
+    &__btn
+      position: absolute
+      right: 0
+      top: 0
+      +r(992)
+        position: static
+        display: flex
+        justify-content: space-between
+        align-items: center
+      .button
+        padding: 14px 55px
+        +r(992)
+          padding: 11px 40px
+      .cabinet__favorites__items-delete
+        display: none
+        font-size: 12px
+        font-weight: normal
+        line-height: 1.4
+        letter-spacing: 0.24px
+        color: $black
+        padding: 10px
+        +r(992)
+          display: block
+
+
+
+  &__history
+    max-width: 995px
+    +relative-x
+    h2
+      color: #333333
+      +Montserrat-18()
+      margin-bottom: 20px
+    &__content
+      max-height: 740px
+      overflow: auto
+      padding-right: 15px
+      +r(992)
+        max-height: 100%
+        padding-right: 0
+        overflow: visible
+        margin-top: -20px
+      &::-webkit-scrollbar
+        width: 4px
+    &__block
+      &:last-child
+        .cabinet__history__footer
+          +r(992)
+            border-bottom: none
+
+    &__title
+      padding: 10px 0
+      border-bottom: 1px solid  $light-gray
+      border-top: 1px solid  $light-gray
+      +r(992)
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        border-top: none
+        padding-top: 0
+      +r(575)
+        width: calc(100% + 30px)
+        margin-left: -15px
+        padding: 0px 0px 10px
+      p
+        color: #333333
+        +Montserrat-18()
+        display: inline-block
+        +r(992)
+          font-size: 16px
+          text-align: center
+          border-bottom: 1px solid  $light-gray
+          padding: 30px 0 5px
+          width: calc(100% + 30px)
+          display: block
+      i
+        font-style: normal
+        margin: 0 10px
+        +r(992)
+          display: none
+      span
+        color: #333333
+        +r(992)
+          padding: 10px 15px 0
+        &:last-child
+          float: right
+          +r(992)
+            float: none
+    .cabinet__favorites
+      &__row
+        margin-bottom: 0
+      &__item
+        border-bottom: none
+        padding: 15px 0
+      &__img
+        width: 73px
+        height: 73px
+      &__info
+        display: flex
+        justify-content: space-between
+        padding-right: 0
+        +r(992)
+          flex-direction: column
+        h4
+          max-width: 580px
+          +r(992)
+            padding-right: 50px
+      &__btn
+        position: static
+        strong, b
+          color: #333333
+          +Montserrat-18()
+          font-weight: normal
+        strong
+          margin-right: 40px
+          +r(992)
+            position: absolute
+            right: 0
+            top: 0
+            margin-right: 0
+        b
+          +r(992)
+            font-size: 16px
+            margin-top: 10px
+    &__footer
+      border-top: 1px solid $light-gray
+      padding: 10px 0 15px
+      +r(992)
+        padding: 10px 15px 0
+        border-bottom: 1px solid  $light-gray
+      +r(575)
+        width: calc(100% + 30px)
+        margin-left: -15px
+      ul
+        display: flex
+        justify-content: space-between
+        margin-bottom: 20px
+        +r(992)
+          margin-bottom: 10px
+      span
+        color: #1bbc82
+        +Montserrat-reg-14()
+        text-transform: uppercase
+      b
+        color: #333333
+        +Montserrat-18()
+        font-weight: normal
+        text-transform: uppercase
+        +r(992)
+          font-size: 16px
+        &:nth-child(2)
+          margin-left: 45px

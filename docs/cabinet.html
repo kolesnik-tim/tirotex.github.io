@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>All Pages</title>
+    <title>Cabinet</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -300,25 +300,325 @@
         </div>
       </div>
       <!--END header-->
-      <div class="pages">
+      <div class="cabinet">
         <div class="container">
-          <h1>All Pages</h1>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="404.html">404</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="news-article.html">News article</a></li>
-            <li><a href="dropshipping.html">Dropshipping</a></li>
-            <li><a href="wholesale.html">Wholesale (ОПТ)</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="delivery.html">Delivery</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="order.html">Order</a></li>
-            <li><a href="product.html">Product</a></li>
-            <li><a href="search.html">Search</a></li>
-            <li><a href="cabinet.html">Cabinet</a></li>
+          <ul class="breadcrumbs">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Личный кабинет</a></li>
           </ul>
+          <h1>Личный кабинет<a href="#">Выход</a></h1>
+          <div class="tabs">
+            <ul class="tabs__caption">
+              <li class="active">Контактная информация</li>
+              <li>Данные доставки</li>
+              <li>Избранное</li>
+              <li>История заказов</li>
+              <li>Возрат товара</li>
+            </ul><a class="cabinet__exit" href="#">Выход</a><button class="cabinet__mobile-btn">Контактная информация</button>
+            <div class="tabs__content active">
+              <form class="cabinet__info">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <h2>Редактирование личных данных</h2>
+                    <div class="cabinet__input"><span>Ваше имя*</span><input type="password" name="name" required></div>
+                    <div class="cabinet__input"><span>Фамилия*</span><input type="text" name="surname" required></div>
+                    <div class="cabinet__input"><span>Телефон*:</span><input type="tel" name="phone" required></div>
+                  </div>
+                  <div class="col-lg-4">
+                    <h2 class="hidden-xs hidden-sm"></h2>
+                    <div class="cabinet__input"><span>Дата рождения</span><input class="datepicker-birth" type="text" name="data" data-position="bottom right"><a class="calendar-open" href="#"><i class="icon-calendar"></i></a></div>
+                    <div class="cabinet__input"><span>E-mail*</span><input type="email" name="email" required></div>
+                    <div class="cabinet__checkbox"><label><input type="checkbox" checked><span>Уведомленить о новинках, скидках, акциях</span></label></div>
+                  </div>
+                  <div class="col-lg-4">
+                    <h2>Изменение пароля</h2>
+                    <div class="cabinet__input"><span>Старый пароль*</span><input type="password" name="password-old" required></div>
+                    <div class="cabinet__input"><span>Новый пароль*</span><input type="password" name="password-new" required></div>
+                    <div class="cabinet__input"><span>Подтверждение пароля*</span><input type="password" name="password-check" required></div>
+                    <div class="cabinet__submit"><button class="button button-secondary" type="submit">Сохранить</button></div>
+                  </div>
+                </div>
+              </form>
+            </div><button class="cabinet__mobile-btn">Данные доставки</button>
+            <div class="tabs__content">
+              <form class="cabinet__delivery">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <h2>История
+                      <!-- span Список пока пустой-->
+                    </h2>
+                    <div class="cabinet__radio cabinet__radio--history"><label><input type="radio" name="history"><b>Имя фамилия</b>
+                        <ul>
+                          <li>ул. Преображенская, д. 12, кв. 23</li>
+                          <li>г. Одесса, Одесская область.</li>
+                          <li>индекс: 90400</li>
+                          <li>тел. 099-300-00-00</li>
+                        </ul>
+                      </label></div>
+                    <div class="cabinet__radio cabinet__radio--history"><label><input type="radio" name="history"><b>Имя фамилия</b>
+                        <ul>
+                          <li>ул. Преображенская, д. 12, кв. 23</li>
+                          <li>г. Одесса, Одесская область.</li>
+                          <li>индекс: 90400</li>
+                          <li>тел. 099-300-00-00</li>
+                        </ul>
+                      </label></div>
+                  </div>
+                  <div class="col-lg-4">
+                    <h2>Добавить новые данные получателя</h2>
+                    <div class="cabinet__input"><span>Ваше имя*</span><input type="password" name="name" required></div>
+                    <div class="cabinet__input"><span>Фамилия*</span><input type="text" name="surname" required></div>
+                    <div class="cabinet__input"><span>Телефон*:</span><input type="tel" name="phone" required></div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="cabinet__delivery-options">
+                      <h2>Варианты доставки</h2>
+                      <div class="cabinet__radio-block">
+                        <div class="cabinet__radio"><label><input type="radio" name="delivery"><b>Новая почта</b></label></div>
+                        <div class="cabinet__radio"><label><input type="radio" name="delivery" checked><b>Укр почта</b></label></div>
+                        <div class="cabinet__radio"><label><input type="radio" name="delivery"><b>Курьер Новой почты</b></label></div>
+                        <div class="cabinet__radio"><label><input type="radio" name="delivery"><b>Курьер Укр почты</b></label></div>
+                        <div class="cabinet__radio"><label><input type="radio" name="delivery"><b>Курьер Tirotex по Одессе</b></label></div>
+                      </div>
+                    </div>
+                    <div class="cabinet__input"><span>Город*</span><input type="text" name="sity" required></div>
+                    <div class="cabinet__input cabinet__input__mobile"><span>Выберите отделение:</span><input type="text" name="branch"></div>
+                    <div class="cabinet__input hidden-xs hidden-sm"><span>Улица*</span><input type="text" name="street" required></div>
+                    <div class="row cabinet__no-indent hidden-xs hidden-sm">
+                      <div class="col-lg-4">
+                        <div class="cabinet__input"><span>Дом*</span><input type="number" name="phone" required></div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="cabinet__input"><span>Квартира*</span><input type="number" name="flat" required></div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="cabinet__input"><span>Индекс*</span><input type="number" name="index" required></div>
+                      </div>
+                    </div>
+                    <div class="cabinet__submit"><button class="button button-secondary" type="submit">Сохранить</button></div>
+                  </div>
+                </div>
+              </form>
+            </div><button class="cabinet__mobile-btn">Избранное</button>
+            <div class="tabs__content">
+              <div class="cabinet__favorites">
+                <h5 class="hidden-xs hidden-sm">3 товара</h5>
+                <div class="cabinet__favorites__content">
+                  <div class="cabinet__favorites__item">
+                    <div class="cabinet__favorites__img"><img src="img/product/product.jpg" alt=""></div>
+                    <div class="cabinet__favorites__info">
+                      <h4> <a href="#">Постельный комплект Butterfly (Батерфлай) если длинное название </a></h4><span>Размер: 1.5м*2.0м</span><span>Цвет: небесно-голубой</span>
+                      <div class="cabinet__favorites__row">
+                        <ul class="star">
+                          <li><i class="icon-star"></i></li>
+                          <li><i class="icon-star"></i></li>
+                          <li><i class="icon-star"></i></li>
+                          <li><i class="icon-star"></i></li>
+                          <li><i class="icon-star-transparent"></i></li>
+                        </ul><b>23 отзыва</b>
+                      </div>
+                      <div class="cabinet__favorites__price"><strong class="red"> <s>460 грн</s>460 грн</strong><b class="red">Есть в наличии</b></div>
+                      <div class="cabinet__favorites__btn"><a class="button button-secondary" href="#">Купить</a><a class="cabinet__favorites__items-delete" href="#">Удалить</a></div>
+                    </div>
+                  </div>
+                  <div class="cabinet__favorites__item">
+                    <div class="cabinet__favorites__img"><img src="img/product/product.jpg" alt=""></div>
+                    <div class="cabinet__favorites__info">
+                      <h4> <a href="#">Постельный комплект Butterfly (Батерфлай) если длинное название </a></h4><span>Размер: 1.5м*2.0м</span><span>Цвет: небесно-голубой</span>
+                      <div class="cabinet__favorites__row">
+                        <ul class="star">
+                          <li><i class="icon-star"></i></li>
+                          <li><i class="icon-star"></i></li>
+                          <li><i class="icon-star"></i></li>
+                          <li><i class="icon-star"></i></li>
+                          <li><i class="icon-star-transparent"></i></li>
+                        </ul><b>23 отзыва</b>
+                      </div>
+                      <div class="cabinet__favorites__price"><strong class="red"> <s>460 грн</s>460 грн</strong><b class="red">Есть в наличии</b></div>
+                      <div class="cabinet__favorites__btn"><a class="button button-secondary" href="#">Купить</a><a class="cabinet__favorites__items-delete" href="#">Удалить</a></div>
+                    </div>
+                  </div>
+                  <div class="cabinet__favorites__item">
+                    <div class="cabinet__favorites__img"><img src="img/product/product.jpg" alt=""></div>
+                    <div class="cabinet__favorites__info">
+                      <h4> <a href="#">Постельный комплект Butterfly (Батерфлай) если длинное название </a></h4><span>Размер: 1.5м*2.0м</span><span>Цвет: небесно-голубой</span>
+                      <div class="cabinet__favorites__row">
+                        <ul class="star">
+                          <li><i class="icon-star"></i></li>
+                          <li><i class="icon-star"></i></li>
+                          <li><i class="icon-star"></i></li>
+                          <li><i class="icon-star"></i></li>
+                          <li><i class="icon-star-transparent"></i></li>
+                        </ul><b>23 отзыва</b>
+                      </div>
+                      <div class="cabinet__favorites__price"><strong class="red"> <s>460 грн</s>460 грн</strong><b class="red">Есть в наличии</b></div>
+                      <div class="cabinet__favorites__btn"><a class="button button-secondary" href="#">Купить</a><a class="cabinet__favorites__items-delete" href="#">Удалить</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><button class="cabinet__mobile-btn">История заказов</button>
+            <div class="tabs__content">
+              <div class="cabinet__history">
+                <h2 class="hidden-xs hidden-sm">Ваши заказы</h2>
+                <div class="cabinet__history__content">
+                  <div class="cabinet__history__block">
+                    <div class="cabinet__history__title">
+                      <p>Заказ №4545<i>|</i></p><span>10.12.2020 20:33</span><span>ТТН 203020403949</span>
+                    </div>
+                    <div class="cabinet__favorites__item">
+                      <div class="cabinet__favorites__img"><img src="img/product/product.jpg" alt=""></div>
+                      <div class="cabinet__favorites__info">
+                        <div>
+                          <h4> <a href="#">Постельный комплект Butterfly (Батерфлай) если длинное название </a></h4><span>Размер: 1.5м*2.0м</span><span>Цвет: небесно-голубой</span>
+                          <div class="cabinet__favorites__row">
+                            <ul class="star">
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star-transparent"></i></li>
+                            </ul><b>23 отзыва</b>
+                          </div>
+                        </div>
+                        <div class="cabinet__favorites__btn"><strong>1 шт</strong><b>460 грн</b></div>
+                      </div>
+                    </div>
+                    <div class="cabinet__favorites__item">
+                      <div class="cabinet__favorites__img"><img src="img/product/product.jpg" alt=""></div>
+                      <div class="cabinet__favorites__info">
+                        <div>
+                          <h4> <a href="#">Постельный комплект Butterfly (Батерфлай) если длинное название </a></h4><span>Размер: 1.5м*2.0м</span><span>Цвет: небесно-голубой</span>
+                          <div class="cabinet__favorites__row">
+                            <ul class="star">
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star-transparent"></i></li>
+                            </ul><b>23 отзыва</b>
+                          </div>
+                        </div>
+                        <div class="cabinet__favorites__btn"><strong>1 шт</strong><b>460 грн</b></div>
+                      </div>
+                    </div>
+                    <div class="cabinet__favorites__item">
+                      <div class="cabinet__favorites__img"><img src="img/product/product.jpg" alt=""></div>
+                      <div class="cabinet__favorites__info">
+                        <div>
+                          <h4> <a href="#">Постельный комплект Butterfly (Батерфлай) если длинное название </a></h4><span>Размер: 1.5м*2.0м</span><span>Цвет: небесно-голубой</span>
+                          <div class="cabinet__favorites__row">
+                            <ul class="star">
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star-transparent"></i></li>
+                            </ul><b>23 отзыва</b>
+                          </div>
+                        </div>
+                        <div class="cabinet__favorites__btn"><strong>1 шт</strong><b>460 грн</b></div>
+                      </div>
+                    </div>
+                    <div class="cabinet__history__footer">
+                      <ul>
+                        <li> <span>Скидка:</span></li>
+                        <li><span>-40грн</span></li>
+                      </ul>
+                      <ul>
+                        <li> <b>Всего:</b></li>
+                        <li><b class="hidden-xs hidden-sm">3 шт</b><b>1380 грн </b></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="cabinet__history__block">
+                    <div class="cabinet__history__title">
+                      <p>Заказ №4545<i>|</i></p><span>10.12.2020 20:33</span><span>ТТН 203020403949</span>
+                    </div>
+                    <div class="cabinet__favorites__item">
+                      <div class="cabinet__favorites__img"><img src="img/product/product.jpg" alt=""></div>
+                      <div class="cabinet__favorites__info">
+                        <div>
+                          <h4> <a href="#">Постельный комплект Butterfly (Батерфлай) если длинное название </a></h4><span>Размер: 1.5м*2.0м</span><span>Цвет: небесно-голубой</span>
+                          <div class="cabinet__favorites__row">
+                            <ul class="star">
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star-transparent"></i></li>
+                            </ul><b>23 отзыва</b>
+                          </div>
+                        </div>
+                        <div class="cabinet__favorites__btn"><strong>1 шт</strong><b>460 грн</b></div>
+                      </div>
+                    </div>
+                    <div class="cabinet__favorites__item">
+                      <div class="cabinet__favorites__img"><img src="img/product/product.jpg" alt=""></div>
+                      <div class="cabinet__favorites__info">
+                        <div>
+                          <h4> <a href="#">Постельный комплект Butterfly (Батерфлай) если длинное название </a></h4><span>Размер: 1.5м*2.0м</span><span>Цвет: небесно-голубой</span>
+                          <div class="cabinet__favorites__row">
+                            <ul class="star">
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star-transparent"></i></li>
+                            </ul><b>23 отзыва</b>
+                          </div>
+                        </div>
+                        <div class="cabinet__favorites__btn"><strong>1 шт</strong><b>460 грн</b></div>
+                      </div>
+                    </div>
+                    <div class="cabinet__favorites__item">
+                      <div class="cabinet__favorites__img"><img src="img/product/product.jpg" alt=""></div>
+                      <div class="cabinet__favorites__info">
+                        <div>
+                          <h4> <a href="#">Постельный комплект Butterfly (Батерфлай) если длинное название </a></h4><span>Размер: 1.5м*2.0м</span><span>Цвет: небесно-голубой</span>
+                          <div class="cabinet__favorites__row">
+                            <ul class="star">
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star"></i></li>
+                              <li><i class="icon-star-transparent"></i></li>
+                            </ul><b>23 отзыва</b>
+                          </div>
+                        </div>
+                        <div class="cabinet__favorites__btn"><strong>1 шт</strong><b>460 грн</b></div>
+                      </div>
+                    </div>
+                    <div class="cabinet__history__footer">
+                      <ul>
+                        <li> <span>Скидка:</span></li>
+                        <li><span>-40грн</span></li>
+                      </ul>
+                      <ul>
+                        <li> <b>Всего:</b></li>
+                        <li><b class="hidden-xs hidden-sm">3 шт</b><b>1380 грн </b></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><button class="cabinet__mobile-btn">Возрат товара</button>
+            <div class="tabs__content">
+              <form class="cabinet__return">
+                <h2>Информация о заказе</h2>
+                <div class="cabinet__input"><span>Ваше имя*</span><input type="password" name="name" required></div>
+                <div class="cabinet__input"><span>Фамилия*</span><input type="text" name="surname" required></div>
+                <div class="cabinet__input"><span>Телефон*:</span><input type="tel" name="phone" required></div>
+                <div class="cabinet__input"><span>Номер накладной:</span><input type="number"></div>
+                <div class="cabinet__input"><span>Номер заказа:</span><input type="number"></div>
+                <div class="cabinet__radio"><span>Причина*:</span><label><input type="radio" name="cause"><b>Не тот товар (ошибочный)</b></label></div>
+                <div class="cabinet__radio"><label><input type="radio" name="cause"><b>Брак</b></label></div>
+                <div class="cabinet__radio"><label><input type="radio" name="cause" checked><b>Другое</b></label></div>
+                <div class="cabinet__input cabinet__input--textarea"><span>Описание:</span><textarea></textarea></div>
+                <div class="cabinet__submit"><button class="button button-secondary" type="submit">Отправить</button></div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
       <!--BEGIN footer-->
