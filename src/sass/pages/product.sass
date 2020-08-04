@@ -1,6 +1,8 @@
 .product
   display: flex
   flex-direction: column
+  +r(992)
+    padding-bottom: 20px
   &__title
     display: flex
     justify-content: space-between
@@ -272,7 +274,6 @@
 
   &__tabs
     +r(992)
-      order: 3 !important
       padding-top: 50px
     .tabs
       background-color: #f8f8f8

@@ -1,6 +1,10 @@
 import rangeslider from 'ion-rangeslider';
 import selectric from 'selectric';
 import datepicker from 'air-datepicker';
+import '../lib/maskedinput';
+
+
+$("input[type='tel']").mask('(999)-999-99-99');
 
 
 
@@ -106,10 +110,12 @@ $('.js-range-slider').ionRangeSlider({
 $('.filters-open').on('click', function(event) {
   event.preventDefault();
   $('.search__filters').fadeIn();
+  $('body').css({'overflow': 'hidden'});
 });
 $('.filters-close').on('click', function(event) {
   event.preventDefault();
   $('.search__filters').fadeOut();
+  $('body').css({'overflow': 'visible'});
 });
 
 $('.sorting-open').on('click', function(event) {

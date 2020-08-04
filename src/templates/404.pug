@@ -3,6 +3,8 @@ title: 404
 ---
 extends layouts/_layout
 block content
+  block header
+    include partials/_header
   .error
     .conatainer
       .error__content
@@ -11,4 +13,7 @@ block content
           p Страница не найдена
           a(href="#").button.button-primary Вернуться
 
-  
+  block footer
+    include partials/_footer
+  block pop-up
+    include partials/_pop-up

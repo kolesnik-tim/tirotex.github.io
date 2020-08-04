@@ -3,7 +3,8 @@ $('.open-basket').on('click', function(event) {
   event.preventDefault();
   $(this).parents('.header__basket').siblings('.header__basket__dropdown').fadeToggle();
 });
-$('.basket__close').on('click', function() {
+$('.basket__close').on('click', function(event) {
+  event.preventDefault();
   $(this).parents('.header__basket__dropdown').fadeToggle();
 });
 //header search

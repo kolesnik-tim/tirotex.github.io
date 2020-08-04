@@ -7,23 +7,28 @@ $('[data-fancybox="gallery"]').fancybox({
   toolbar: false,
   smallBtn: true,
   animationEffect: 'fade',
+  clickContent: false,
+  hideOnOverlayClick: true,
+  clickOutside: 'close',
   btnTpl: {
     arrowLeft: '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' + '<i class="icon-arrow-left"></i>' + '</button>',
     arrowRight: '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' + '<i class="icon-arrow-right"></i>' + '</button>',
   },
-  backFocus: false, 
+  // backFocus: false, 
+  loop: true
 });
 
 //home
 var swiper = new Swiper('.swiper-news', {
   slidesPerView: 2,
   spaceBetween: 10,
-  slidesPerGroup: 4,
+  slidesPerGroup: 2,
   loop: true,
   breakpoints: {
     1200: {
       slidesPerView: 4,
       spaceBetween: 30,
+      slidesPerGroup: 4,
     },
     992: {
       slidesPerView: 3,
@@ -42,12 +47,13 @@ var swiper = new Swiper('.swiper-news', {
 var swiper = new Swiper('.swiper-shares', {
   slidesPerView: 2,
   spaceBetween: 10,
-  slidesPerGroup: 4,
+  slidesPerGroup: 2,
   loop: true,
   breakpoints: {
     1200: {
       slidesPerView: 4,
       spaceBetween: 30,
+      slidesPerGroup: 4,
     },
     992: {
       slidesPerView: 3,
