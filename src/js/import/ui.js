@@ -2,26 +2,7 @@ import rangeslider from 'ion-rangeslider';
 import selectric from 'selectric';
 import datepicker from 'air-datepicker';
 import '../lib/maskedinput';
-import Hammer from '../lib/hammer';
 
-// detect hammer on all the document
-var swipe = new Hammer(document);
-// detect swipe and call to a function
-swipe.on('swiperight swipeleft', function(e) {
-  e.preventDefault();
-  if (e.type === 'swiperight') {
-    // open menu
-    $('.mobile-menu-bg').fadeIn();
-    $('.mobile-menu').addClass('active');
-    $('.menu-close').fadeIn(900);
-  } else {
-    // close/hide menu
-    $('.mobile-menu-bg').fadeOut();
-    $('.mobile-menu').removeClass('active');
-    $('.menu-close').fadeOut(300);
-  }
-
-});
 
 
 //maskedinput
