@@ -131,7 +131,7 @@ block content
                   label
                     input(type="radio" name="size" disabled)
                     span Евро+ - 560грн
-                  a(href="#") Сообщить о наличии
+                  a(href="#availability" rel="modal:open") Сообщить о наличии
                 div
                   label
                     input(type="radio" name="size")
@@ -144,6 +144,8 @@ block content
                   label
                     input(type="radio" name="size")
                     span Семейный - 680грн
+                .product__info__size__error
+                  p *Выберите  размер пожалуйста!
               h3 Количество:
               .quantity-block
                 button

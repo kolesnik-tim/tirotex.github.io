@@ -3,13 +3,34 @@ $('a').on('click', function(event) {
   if($(this).attr('rel') === 'modal:open') {
     event.preventDefault();
     let href = $(this).attr('href');
-    $(href).fadeIn();
-    $('.pop-up-bg').fadeIn();
-    if(href === '#reviews') {
-      if($(window).width() < 767) {
-        $('.pop-up-bg').css({'top': '100px'});
+    if(href === '#success') {
+      let i = 0;
+      $('.order__step input').each(function(index, el) {
+        if($(el).val() === '') {
+          $(el).addClass('invalid');
+          $(el).prev('span').css({'color': '#f62459'});
+          i = ++i;
+        } else{
+          $(el).removeClass('invalid');
+          $(el).prev('span').css({'color': '#333333'});
+        }
+      });
+      if(i === 0) {
+        $('.order__step input').removeClass('invalid');
+        $('.order__step input').prev('span').css({'color': '#333333'});
+        $(href).fadeIn();
+        $('.pop-up-bg').fadeIn();
+      }
+    } else{
+      $(href).fadeIn();
+      $('.pop-up-bg').fadeIn();
+      if(href === '#reviews') {
+        if($(window).width() < 767) {
+          $('.pop-up-bg').css({'top': '100px'});
+        }
       }
     }
+
   } 
   //close
   else if($(this).attr('rel') === 'modal:close') {

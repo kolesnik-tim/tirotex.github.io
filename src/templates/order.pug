@@ -28,14 +28,13 @@ block content
                   input(type="text" name="order-surname" required)
                   span Телефон*:
                   input(type="tel" name="order-phone" required)
-                  a(href="#").button.button-secondary.next Далее
               .order__step
                 h3
                   b 
                     div 2.
                     i.icon-check
                   | Варианты доставки
-                .order__step__dropdown(style="display: none")
+                .order__step__dropdown
                   .order__step__radio
                     label
                       input(type="radio" name="delivery" checked)
@@ -56,14 +55,13 @@ block content
                   input(type="text" name="order-sity" required)
                   span Выберите отделение:
                   input(type="text")
-                  a(href="#").button.button-secondary.next Далее
               .order__step
                 h3
                   b 
                     div 3.
                     i.icon-check
                   | Варианты доставки
-                .order__step__dropdown(style="display: none")
+                .order__step__dropdown
                   .order__step__radio
                     label
                       input(type="radio" name="payment")
@@ -76,7 +74,7 @@ block content
                     | Не оплачивайте пожалуйста заказ до подтверждения менеджером!
                   span Комментарий к заказу
                   textarea
-                  a(href="#success" rel="modal:open").button.button-secondary оформить заказ
+                  a(href="#success" rel="modal:open").button.button-secondary.send-order оформить заказ
 
           .col-lg-7
             .order__basket
@@ -89,7 +87,7 @@ block content
                   .order__basket__item__info
                     h2 Постельный комплект Butterfly (Батерфлай) если длинное название 
                     strong 460 грн
-                    b Размер: 1.5м*2.0м
+                    b Размер: Полуторный
                     b Цвет: небесно-голубой
                     .quantity-block
                       button
@@ -103,7 +101,7 @@ block content
                   .order__basket__item__info
                     h2 Постельный комплект Butterfly (Батерфлай) если длинное название 
                     strong 460 грн
-                    b Размер: 1.5м*2.0м
+                    b Размер: Полуторный
                     b Цвет: небесно-голубой
                     .quantity-block
                       button
@@ -117,7 +115,7 @@ block content
                   .order__basket__item__info
                     h2 Постельный комплект Butterfly (Батерфлай) если длинное название 
                     strong 460 грн
-                    b Размер: 1.5м*2.0м
+                    b Размер: Полуторный
                     b Цвет: небесно-голубой
                     .quantity-block
                       button

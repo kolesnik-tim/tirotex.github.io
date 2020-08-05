@@ -30,6 +30,19 @@
     button(type="submit").button.button-secondary Заказать
 
 
+.pop-up#availability.pop-up-order
+  a(href="#availability" rel="modal:close").pop-up__close
+    i.icon-close
+  h2 СООБЩИТЬ О НАЛИИЧИИ
+  p Мы сообщим вам как только комплект появится в данном размере.
+  form
+    span Ваше имя*:
+    input(type="text" name="availability-name" required)
+    span E-mail*:
+    input(type="email" name="availability-imail" required)
+    button(type="submit").button.button-secondary сообщить о поступлении
+
+
 
 .pop-up#back-call.pop-up-order
   a(href="#back-call" rel="modal:close").pop-up__close

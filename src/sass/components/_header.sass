@@ -538,6 +538,7 @@
     height: 100%
     overflow-x: hidden
     overflow-y: auto
+    
   .menu-close
     position: absolute
     right: -42px
@@ -556,7 +557,7 @@
     img
       height: 100%
   &__user
-    padding: 0 15px 35px
+    padding: 0 15px 20px
     a
       font-size: 16px
       font-weight: normal
@@ -568,9 +569,18 @@
       &:first-child::after
         content: '|'
         margin: 0 5px
+  &__contact
+    padding: 0 15px
+    a
+      font-size: 14px
+      font-weight: normal
+      color: #ffffff
+      display: block
+      margin-bottom: 20px
   &__nav
-    padding: 0 15px 10px
+    padding: 25px 15px 10px
     border-bottom: 1px solid #cccccc
+    border-top: 1px solid #cccccc
     span
       font-size: 18px
       font-weight: 600
