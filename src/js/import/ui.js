@@ -8,6 +8,9 @@ import '../lib/maskedinput';
 //maskedinput
 $("input[type='tel']").mask('(999)-999-99-99');
 
+if($(window).width() <= 992) {
+  $('.datepicker-birth').attr('disabled', 'disabled');
+}
 
 
 //datepicker

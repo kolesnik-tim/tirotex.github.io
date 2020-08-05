@@ -45,7 +45,8 @@ $(window).scroll(function() {
 ////mobile-menu
 
 // detect hammer on all the document
-var swipe = new Hammer(document);
+var myElement = document.getElementById('out');
+var swipe = new Hammer(myElement);
 // detect swipe and call to a function
 swipe.on('swiperight swipeleft', function(e) {
   e.preventDefault();
