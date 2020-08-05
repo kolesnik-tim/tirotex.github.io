@@ -2,7 +2,7 @@ import Swiper from 'swiper/bundle';
 import fencybox from '@fancyapps/fancybox';
 
 //fencibox
-$('[data-fancybox="gallery"]').fancybox({
+var instance = $('[data-fancybox="gallery"]').fancybox({
   infobar: false,  
   toolbar: false,
   smallBtn: true,
@@ -16,6 +16,10 @@ $('[data-fancybox="gallery"]').fancybox({
   },
   // backFocus: false, 
   loop: true
+});
+$('body').on('click', '.fancybox-content', function() {
+  console.log('ve');
+  instance.close();
 });
 
 //home
