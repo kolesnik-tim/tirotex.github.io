@@ -6,7 +6,11 @@ import '../lib/maskedinput';
 
 
 //maskedinput
-$("input[type='tel']").mask('(999)-999-99-99');
+$("input[type='tel']").mask('(999)-999-99-99').on('click', function() {
+  if ($(this).val() === '(___)-___-__-__') {
+    $(this).get(0).setSelectionRange(0, 0);
+  }
+});
 
 if($(window).width() <= 992) {
   $('.datepicker-birth').attr('disabled', 'disabled');
