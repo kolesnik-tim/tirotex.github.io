@@ -11,6 +11,7 @@ $("input[type='tel']").mask('(999)-999-99-99');
 //datepicker
 var myDatepicker = $('.datepicker-birth').datepicker({
   showEvent: '',
+  autoClose: true
 }).data('datepicker');
 $('.calendar-open').on('click',function(event) {
   event.preventDefault();
