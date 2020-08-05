@@ -11,6 +11,16 @@ $('.basket__close').on('click', function(event) {
   event.preventDefault();
   $(this).parents('.header__basket__dropdown').fadeToggle();
 });
+$(document).mouseup(function(e) { // событие клика по веб-документу
+  var div = $('.header__basket__dropdown'); // тут указываем ID элемента
+  if (!div.is(e.target) // если клик был не по нашему блоку
+      && div.has(e.target).length === 0) { // и не по его дочерним элементам
+    div.fadeOut(); // скрываем его
+  }
+});
+
+
+
 //header search
 $('.header__search__input input').on('keyup', function() {
   if($(this).val() !== '') {
@@ -48,23 +58,24 @@ $(window).scroll(function() {
 var myElement = document.getElementById('out');
 var swipe = new Hammer(myElement);
 // detect swipe and call to a function
-swipe.on('swiperight swipeleft', function(e) {
-  e.preventDefault();
-  let notSwipe = e.target;
-  console.log();
-  if (e.type === 'swiperight' && !$(notSwipe).parents('div').hasClass('swiper-container')) {
+if($(window).width() <= 992) {
+  swipe.on('swiperight swipeleft', function(e) {
+    e.preventDefault();
+    let notSwipe = e.target;
+    console.log();
+    if (e.type === 'swiperight' && !$(notSwipe).parents('div').hasClass('swiper-container')) {
     // open menu
-    $('.mobile-menu-bg').fadeIn();
-    $('.mobile-menu').addClass('active');
-    $('.menu-close').fadeIn(900);
-  } else {
+      $('.mobile-menu-bg').fadeIn();
+      $('.mobile-menu').addClass('active');
+      $('.menu-close').fadeIn(900);
+    } else {
     // close/hide menu
-    $('.mobile-menu-bg').fadeOut();
-    $('.mobile-menu').removeClass('active');
-    $('.menu-close').fadeOut(300);
-  }
-
-});
+      $('.mobile-menu-bg').fadeOut();
+      $('.mobile-menu').removeClass('active');
+      $('.menu-close').fadeOut(300);
+    }
+  });
+}
 
 
 

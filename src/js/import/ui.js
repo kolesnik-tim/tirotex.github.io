@@ -30,6 +30,24 @@ $('select').selectric({
 });
 
 
+//product
+$('.product__info__btn .button-secondary').on('click', function(event) {
+  event.preventDefault();
+  let i = 0;
+  $('.product__info__size input').each(function(index, el) {
+    if($(el).prop('checked')) {
+    } else{
+      i = ++i;
+    }
+  });  
+  console.log(i);
+  if(i < 6) {
+    $('.product__info__size__error').slideUp();
+  } else{
+    $('.product__info__size__error').slideDown();
+  }
+});
+
 
 
 //plus minus home

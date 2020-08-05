@@ -10,6 +10,9 @@ $('a').on('click', function(event) {
           $(el).addClass('invalid');
           $(el).prev('span').css({'color': '#f62459'});
           i = ++i;
+          if(i === 1) {
+            $('html, body').animate({scrollTop: $('.order__step input.invalid').offset().top - 100},300);
+          }
         } else{
           $(el).removeClass('invalid');
           $(el).prev('span').css({'color': '#333333'});
