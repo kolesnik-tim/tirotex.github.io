@@ -17,10 +17,14 @@ var instance = $('[data-fancybox="gallery"]').fancybox({
   // backFocus: false, 
   loop: true
 });
-$('body').on('click', '.fancybox-content', function() {
-  console.log('ve');
-  instance.close();
-});
+
+setTimeout(function() {
+  $('body').on('click', '.fancybox-content', function() {
+    console.log('ve');
+    instance.close();
+  });
+},500);
+
 
 //home
 var swiper = new Swiper('.swiper-news', {
