@@ -50,7 +50,9 @@ var swipe = new Hammer(myElement);
 // detect swipe and call to a function
 swipe.on('swiperight swipeleft', function(e) {
   e.preventDefault();
-  if (e.type === 'swiperight') {
+  let notSwipe = e.target;
+  console.log();
+  if (e.type === 'swiperight' && !$(notSwipe).parents('div').hasClass('swiper-container')) {
     // open menu
     $('.mobile-menu-bg').fadeIn();
     $('.mobile-menu').addClass('active');
@@ -63,6 +65,7 @@ swipe.on('swiperight swipeleft', function(e) {
   }
 
 });
+
 
 
 
